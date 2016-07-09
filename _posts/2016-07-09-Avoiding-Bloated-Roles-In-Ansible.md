@@ -39,7 +39,6 @@ In the above we could workaround this with some logic around nginx.conf, but doi
 My webserver role really feels too big to be reusable for my api servers.
 I think this is the crux of many messy Ansible environments in large sites, you're trying to do what Ansible tells you but it turns out less than good.
 
-I also think Ansible Inc started out with the right intentions, but as Ansible has become successful it's outgrown the original meaning of *role*.
 But....what if we change the word role for *component*?
 
 Look at your hand.
@@ -74,6 +73,6 @@ It often appears easier just to create a fresh task list because reusing a role 
 But when you combine Ansible's strength with its power of reusable elements (components, ie roles) you can leverage some serious efficiency gains.
 Thinking in terms of components (roles) encourages reuse, saving time and avoiding coding conflicts.
 
-If you're finding yourself in an environment where you're continually writing roles from scratch, perhaps you're using Ansible's strength but missing out on its power.
+If you're finding yourself continually writing roles from scratch, perhaps you're using Ansible's strength but missing out on its power.
 When you think of roles as simple components, they become reusable by design.
 I don't think Ansible Inc were wrong to call them *roles*, I simply think they've evolved to have a slightly different English language meaning in the more complex environments we work on.
