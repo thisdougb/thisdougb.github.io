@@ -35,8 +35,8 @@ I have almost 90% duplication in my tasks/main.yml file.
     - apiserver
 ```
 
-In the above we workaround this with some logic around nginx.conf, but doing so loses readibility and intuitiveness.
-My webserver role feels too big to be reusable for my api servers, I'm hacking it to make an exception.
+In the above we could workaround this with some logic around nginx.conf, but doing so loses readibility and intuitiveness.
+But my webserver role really feels too big to be reusable for my api servers.
 I think this is the crux of many messy Ansible environments in large sites, you're trying to do what Ansible tells you but it turns out less than good.
 
 I also think Ansible Inc started out with the right intentions, but as Ansible has become successful it's outgrown the original meaning of *role*.
