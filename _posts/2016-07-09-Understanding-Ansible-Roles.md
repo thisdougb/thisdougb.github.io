@@ -6,16 +6,19 @@ tags: ansible,role,guide,devops
 
 While working on a recent Ansible project I think I realised why Ansible roles are both fantastic and deadly.
 It's not the syntax, it's the semantics.
-And the problem comes from a subtle change in the meaning and intent of roles, which appears to cause role-bloat. 
-I think you can deduce this from the various role names used by Ansible Inc in the documentation over the years.
+And the problem comes from a subtle change in the meaning and intent of *roles*, which appears to cause role-bloat. 
 
 When I first started using roles, the documentation gave examples of roles with names such as *webserver* and *appserver*.
 This is fine when you're learning and trying out some examples with Vagrant VMs.
-However the role of a webserver is a lot more complex in production, and it's here roles (precisely where we need them) get messy.
+However the role of a production webserver is a lot more complex, and it's here roles (precisely where we need them) get messy.
 
-As I built roles, and the list of tasks grew, it became clear something was wrong.
+As I built roles the list of tasks grew, and it became clear something was wrong.
 I'm using roles as Ansible wants me to (and Ansible clearly wants you to), but the results are ugly, sometimes very ugly.
+
+It looks all neat and clean in the site.yml, but the mess is pushed into the ~/tasks/main.yml file.
 My *webserver* role needed nginx, nginx config, firewall rules, intrusion detection scripts, etc.
+But my *apiserver* role also runs an nginx proxy service.
+It has almost the same list of tasks as my webserver role, except for the nginx.conf template.
 
 ```
 # file: site.yml
@@ -33,14 +36,13 @@ My *webserver* role needed nginx, nginx config, firewall rules, intrusion detect
     - apiserver
 ```
 
-But my *apiserver* role also runs an nginx proxy service.
-It has almost the same list of tasks as my webserver role, except for the nginx.conf template.
-Now it's possible to workaround this and reuse the webserver role with some logic around nginx.conf, but doing so feels ugly and loses the api role boundary.
-My webserver role doesn't feel reusable in for my api servers, certainly not in an easy and visibly understandable way.
+Now, in the above we workaround this and reuse the webserver role with some logic around nginx.conf, but doing so feels ugly and loses the api role boundary.
+My webserver role doesn't feel reusable for my api servers, I'm just hacking it as an exception.
 I think this is the crux of many messy Ansible environments in large sites, you're trying to do what Ansible tells you but it turns out less than good.
 
 I also think Ansible Inc started out with the right intentions, but as Ansible has become successful it's outgrown the original meaning of *role*.
 What if we change the word role for *component*?
+
 Look at your hand.
 The palm of your hand is the core component, and the fingers are the tasks that combine to make it a *hand*.
 If my *component* is nginx, then I can think of the fingers as the stock nginx.conf, installed state and service state.
