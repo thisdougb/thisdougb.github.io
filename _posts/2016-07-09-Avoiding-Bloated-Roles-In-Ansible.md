@@ -74,7 +74,7 @@ My hand is always a hand, never sometimes a foot.
     - firewallAPIConfig
     - apiIntrusionDetectionConfig
 ```
-To my mind this site.yml is much more informative, and I'm able to reuse components (roles) much more easily.
+To my mind this site.yml is much more informative, and I'm able to reuse components (roles) easily.
 In turn, if I need to change the api server firewall rules then I won't affect the webservers group at all.
 And yet if I need to change the base firewall package in my platform I only need to make that change in a single role.
 Precisely what Ansible is designed to do.
@@ -82,9 +82,9 @@ Precisely what Ansible is designed to do.
 So Ansible's strength is also a potential weakness.
 It often feels easier just to create a fresh task list because reusing a role involves burying logic and inviting Git commit conflicts.
 But when you combine Ansible's strength with its power of reusable elements (components, ie roles) you can leverage some serious efficiency gains.
-Thinking in terms of components (roles) encourages reuse, saving time and avoiding coding conflicts.
+Thinking in terms of components (roles) encourages reuse, saving time and avoiding conflicts.
 
-If you're finding yourself continually writing roles from scratch, perhaps you're using Ansible's strength but missing out on its power.
+If you finding yourself continually writing roles from scratch, perhaps you're using Ansible's strength but missing out on its power?
 When you think of roles as simple components or basic building blocks, they become reusable by design.
 There are strong similarities with the core object oriented programming paradigms.
 I don't think Ansible Inc were wrong to call them *roles*, I simply think they've evolved to have a slightly different English language meaning in the more complex environments we work on.
