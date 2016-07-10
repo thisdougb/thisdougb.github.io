@@ -83,7 +83,7 @@ Precisely what Ansible is designed to do.
 So Ansible's strength is also a potential weakness.
 It often feels easier just to create a fresh task list, because reusing an existing role involves burying logic and a great deal of testing.
 But when you combine Ansible's strength with its power of reusable components, you can leverage some serious efficiency gains.
-Thinking in of roles as components encourages reuse, saving time and avoiding conflicts.
+Thinking of roles as components encourages reuse, saving time and avoiding conflicts.
 
 If you finding yourself continually writing roles from scratch, perhaps you're using Ansible's strength but missing out on its power?
 When you think of roles as simple components or basic building blocks, they become reusable by design.
