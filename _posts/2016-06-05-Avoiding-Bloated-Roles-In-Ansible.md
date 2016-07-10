@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Avoiding Bloated Roles In Ansible
-category: ansible
+permalink: /ansible/avoiding-bloated-roles
 tags: ansible,role,guide,devops
 ---
 While working on a recent Ansible project I think I realised why roles are both fantastic and deadly.
