@@ -2,7 +2,7 @@
 layout: post
 title: Avoiding Bloated Roles In Ansible
 permalink: /ansible/avoiding-bloated-roles
-tags: ansible,role,guide,devops
+tags: ansible,role,roles,playbook,play,devops,engineering
 ---
 While working on a recent Ansible project I think I realised why roles are both fantastic and deadly.
 It's not the syntax, it's the semantics.
