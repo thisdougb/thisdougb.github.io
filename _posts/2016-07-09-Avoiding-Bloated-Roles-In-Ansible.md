@@ -12,10 +12,10 @@ Which made complete sense, in a similar way as going for a job such as a develop
 However, using this high level meaning of role to define (or hide) complex configurations is where I find things get messy.
 
 As I built roles for real production services the list of tasks grew, and it became clear something was wrong.
-It looks all neat and clean in the site.yml, but I find I'm unable to reuse roles and find it quicker writing new roles from scratch.
+It looks all neat and clean in the site.yml, but I find I'm rarely able to reuse roles.
 I'm using roles as Ansible wants me to (and Ansible clearly wants us to), but the results can be ugly, sometimes very ugly.
 
-This manifests as broken playbooks, lack of code-reuse, inflexibility, and continual tweaking.
+This manifests as broken playbooks, lack of code-reuse, inflexibility, and changes touching many files.
 Precisely the problems Ansible is designed to solve.
 Ironic, huh?
 
@@ -43,7 +43,7 @@ In the above we could have a single role with some logic around nginx.conf, but 
 We also break what a *role* naturally means to us; I don't want the webserver role to *sometimes* build an api server.
 I think this is the crux of many messy Ansible environments in large sites, you're trying to do what Ansible tells you but it turns out less than good.
 
-But....what if we change the word role for *component*?
+But....what if we change the word role to *component*?
 
 Look at your hand.
 Imagine the palm of your hand is the core component, and the fingers are the tasks that combine to make it a *hand*.
@@ -80,9 +80,9 @@ And yet if I need to change the base firewall package in my platform I only need
 Precisely what Ansible is designed to do.
 
 So Ansible's strength is also a potential weakness.
-It often feels easier just to create a fresh task list because reusing a role involves burying logic and inviting Git commit conflicts.
+It often feels easier just to create a fresh task list, because reusing an existing role involves burying logic and a great deal of testing.
 But when you combine Ansible's strength with its power of reusable elements (components, ie roles) you can leverage some serious efficiency gains.
-Thinking in terms of components (roles) encourages reuse, saving time and avoiding conflicts.
+Thinking in of roles as components encourages reuse, saving time and avoiding conflicts.
 
 If you finding yourself continually writing roles from scratch, perhaps you're using Ansible's strength but missing out on its power?
 When you think of roles as simple components or basic building blocks, they become reusable by design.
