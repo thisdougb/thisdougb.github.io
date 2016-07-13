@@ -14,6 +14,7 @@ I blogged about the dangers of [bloated roles]{https://thisdougb.github.io/ansib
 But their situation caused me to ponder if there really was a situation where unit testing was a benefit rather than simply an overhead.
 
 Imagine the following minimal role called *httpdPackage*, committed yesterday by DevOps engineer thisdougb.
+
 ```
 ---
 - name: Ensure Apache web server is installed
@@ -27,12 +28,14 @@ Imagine the following minimal role called *httpdPackage*, committed yesterday by
     name: httpd
     state: started
 ```
+
 Great role, does a simple job and no more.
 It will fail early if httpd is not available, or not started.
 
 So while I am out for lunch another DevOps engineer on a different project commits a change to our roles repo.
 Let's call this other engineer thisdevilb.
 Here's what thisdevilb commits:
+
 ```
 ---
 - name: Ensure Apache web server is installed
@@ -46,6 +49,7 @@ Here's what thisdevilb commits:
     name: sshd
     state: started
 ```
+
 The mistake on the second last line won't cause the play to fail.
 And to be fair, in a more complex setup with included files and variables, and multiple engineers, this sort of mistake is quite possible.
 If this rolls out to our production environment, or even taking out our dev environment, it's not good.
