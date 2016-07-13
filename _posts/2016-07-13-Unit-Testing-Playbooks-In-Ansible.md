@@ -6,11 +6,12 @@ tags: ansible,role,roles,playbook,play,devops,engineering,continuous,integration
 ---
 I confess that I am not an advocate of testing Ansible roles.
 Roles written in the minimalist sense should fail early, it's the Ansible way.
-To add extra layers of testing seems introduce complexity and duplication, which may itself fail.
+To add extra layers of testing seems to introduce complexity and duplication, which may itself fail.
 
 But while talking to a client about their Ansible journey, I've become more receptive to unit testing of roles.
 With many DevOps engineers working on a bunch of roles the company found errors were creeping in. 
 Frequent enough that roles were being written from scratch, deemed easier than unpicking spaghetti.
+
 I blogged about the dangers of [bloated roles](https://thisdougb.github.io/ansible/avoiding-bloated-roles "Bloated roles in Ansible"), and it's certainly a major cause of playbooks not playing ball.
 But my clients situation caused me to ponder if there really was a case for unit testing after all.
 
@@ -96,4 +97,4 @@ And they should be tagged so we can run them in isolation.
 
 Tags are important here.
 We can use them to make continuous integration much more effective.
-On a commit we trigger Jenkins (for example) to run a play on a virtual instance, and then a second run with *--tags unitTests* to confirm we have a valid configuration.
+On a commit we trigger Jenkins (for example) to run a play on a virtual instance, and then a second run with *--tags unitTests* to confirm we have the configuration we intended.
