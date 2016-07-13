@@ -74,20 +74,20 @@ And they should be tagged so we can run them in isolation.
     name: httpd 
     state: present
 
-- name: unitTest - httpd installed
+- name: unitTest - Apache web server is installed
   command: /bin/systemctl status httpd
   register: result
   failed_when: "'Loaded: not-found' in result.stdout"
   tags:
     - unitTests
 
-- name: Ensure Apache web server running
+- name: Ensure Apache web server is running
   service: 
     enabled: yes
     name: httpd 
     state: started 
 
-- name: unitTest - httpd is running
+- name: unitTest - Apache web server is running
   command: /bin/systemctl status httpd
   register: result
   failed_when: "'Active: active (running)' not in result.stdout"
