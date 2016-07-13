@@ -52,8 +52,45 @@ Here's what @thisdevilb commits:
 ```
 
 See the clanger?
-The mistake on the second last line won't cause the play to fail.
+The mistake on the second last line won't cause the play to fail, but it's clearly not our intended state.
 And to be fair, in a complex setup with included files and variables, and multiple engineers, this sort of mistake happens.
 If this rolls out to our production environment, or even taking out our dev environment, it's not good.
 
 
+So this appears to be a very good reason for running unit tests on roles, particularly in many-hands environments.
+There should be some consistency when writing unit tests.
+They should be read only, never making changes.
+They should also test only a single associated task, so we shouldn't get carried away with complexity.
+And they should be tagged so we can run them in isolation.
+
+```
+---
+- name: Ensure Apache web server is installed
+  yum: 
+    name: httpd 
+    state: present
+
+- name: unitTest - httpd installed
+  command: /bin/systemctl status httpd
+  register: result
+  failed_when: "'Loaded: not-found' in result.stdout"
+  tags:
+    - unitTests
+
+- name: Ensure Apache web server running
+  service: 
+    enabled: yes
+    name: httpd 
+    state: started 
+
+- name: unitTest - httpd is running
+  command: /bin/systemctl status httpd
+  register: result
+  failed_when: "'Active: active (running)' not in result.stdout"
+  tags:
+    - unitTests
+```
+
+Tags are important here.
+We can use them to make continuous integration much more effective.
+On a commit we trigger Jenkins (for example) to run a play on a virtual instance, and then run again with *--tags unitTests* to confirm we have a valid configuration.
