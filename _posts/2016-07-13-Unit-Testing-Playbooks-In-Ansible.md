@@ -12,6 +12,7 @@ To add extra layers of testing seems to introduce complexity and duplication, wh
 But while talking to a client about their Ansible journey, I've become more receptive to unit testing of roles.
 With many DevOps engineers co-maintaining a bunch of roles the company found errors were creeping in. 
 Enough errors that similar roles were being written from scratch for each project, deemed more expedient than unpicking role-spaghetti.
+Be warned, the technical-debt danger applies to DevOps just as much as to app development.
 
 I blogged about the dangers of [bloated roles](https://thisdougb.github.io/ansible/avoiding-bloated-roles "Bloated roles in Ansible"), and that's certainly one route to playbook unhappiness.
 But my clients situation caused me to ponder if there really was a case for unit testing after all.
