@@ -112,7 +112,7 @@ This checks .yml syntax, and that all tasks in the playbook run.
 
 A second run with *--tags unitTests* to confirms we really do have the configuration we intended.
 With the unitTests post-configuration run we are also confirming that no subsequent tasks have changed our intended state.
-This is particularly relevent for integration testing.
+This is particularly relevant for integration testing.
 
 ```
 $ ansible-playbook provisioning/site.yml --tags "unitTests"
