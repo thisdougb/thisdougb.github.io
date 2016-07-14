@@ -110,8 +110,7 @@ Tags are important here, because we can use them in our continuous integration f
 On a commit we trigger Jenkins to run the entire playbook on a virtual instance.
 This checks .yml syntax, and that all tasks in the playbook run.
 
-A second run of just the unit tests, *'--tags unitTests'*, checks we really do have the configuration we intended.
-This is particularly useful for automated integration testing.
+With a second run of just the unit tests, *'--tags unitTests'*, against the built VM we can check the configuration is as we really intended.
 
 ```
 $ ansible-playbook provisioning/site.yml --tags "unitTests"
