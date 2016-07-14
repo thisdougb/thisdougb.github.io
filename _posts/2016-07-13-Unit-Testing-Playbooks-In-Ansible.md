@@ -109,7 +109,10 @@ Despite effectively doubling the size of the role with unitTest code it preserve
 Tags are important here, because we can use them in our continuous integration framework.
 On a commit we trigger Jenkins to run the entire playbook on a virtual instance.
 This checks .yml syntax, and that all tasks in the playbook run.
+
 A second run with *--tags unitTests* to confirms we really do have the configuration we intended.
+With the unitTests post-configuration run we are also confirming that no subsequent tasks have changed our intended state.
+This is particularly relevent for integration testing.
 
 ```
 $ ansible-playbook provisioning/site.yml --tags "unitTests"
