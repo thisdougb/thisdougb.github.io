@@ -12,7 +12,7 @@ To add extra layers of testing seems to introduce complexity and duplication, wh
 But while talking to a client about their Ansible journey, I've become more receptive to unit testing of roles.
 With many DevOps engineers co-maintaining a bunch of roles the company found errors were creeping in. 
 Enough errors that similar roles were being written from scratch for each project, deemed more expedient than unpicking role-spaghetti.
-Be warned, the technical-debt danger applies to DevOps just as much as to app development.
+The technical-debt danger applies to DevOps just as much as to app development.
 
 I blogged about the dangers of [bloated roles](https://thisdougb.github.io/ansible/avoiding-bloated-roles "Bloated roles in Ansible"), and that's certainly one route to playbook unhappiness.
 But my clients situation caused me to ponder if there really was a case for unit testing after all.
@@ -65,12 +65,12 @@ In a busy DevOps team co-authoring large plays, this sort of mistake happens.
 If this rolls out to our production environment, or impacts our dev environment, it's not good.
 So this appears to be a very good case for running unit tests on roles.
 
-As always with unit testing it should be fairly a fairly easy and well defined process.
-Test should be read only, never making changes to state.
-They should also test only a single associated task, so we shouldn't get carried away with complexity.
+As always with unit testing it should be a fairly easy and well defined process.
+Tests should be read only, never making changes to state.
+They should test only a single associated task, so we shouldn't get carried away with complexity.
 And they should be tagged so we can run them in isolation.
 
-I prefer the tight association of unit tests with the task in the same .yml file, *'task > unitTest > task > unitTest'*.
+I prefer the tight association of unit test and task in the same .yml file, *'task > unitTest > task > unitTest'*.
 This suits my preferred style of building roles, thought of as components or discrete units of work.
 Despite effectively doubling the size of the role with unitTest code it preserves readability.
 
