@@ -110,7 +110,7 @@ Tags are important here, because we can use them in our continuous integration f
 On a commit we trigger Jenkins to run the entire playbook on a virtual instance.
 This checks .yml syntax, and that all tasks in the playbook run.
 
-A second run with *--tags unitTests* to confirms we really do have the configuration we intended.
+A second run with *'--tags unitTests'* confirms we really do have the configuration we intended.
 With the unitTests post-configuration run we are also confirming that no subsequent tasks have changed our intended state.
 This is particularly relevant for integration testing.
 
