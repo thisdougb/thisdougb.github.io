@@ -111,6 +111,7 @@ On a commit we trigger Jenkins to run the entire playbook on a virtual instance.
 This checks .yml syntax, and that all tasks in the playbook run.
 
 With a second run of just the unit tests, *'--tags unitTests'*, against the built VM we can check the configuration is as we really intended.
+And this should be extended to run all plays affected by the file committed.
 
 ```
 $ ansible-playbook provisioning/site.yml --tags "unitTests"
