@@ -85,7 +85,7 @@ path:  [0, 2, 3]
 
 Once we turn the code part of 'infrastructure as code' into data in its own right, we can analyse it and apply relevant rules and thresholds.
 Do we have too many logic branches based on supported software version numbers?
-Did our last commit increase complexity by 30%, if so automatically flag for peer review maybe?
+Did our last commit increase the use of custom shell scripts by 10%, if so automatically flag for peer review maybe?
 
 There are lots of possibilities when you treat configuration as data, but the overall aim must be to keep the *friction caused by technological span* to a pragmatically low level.
 A sort of cleaner style of Agile...
