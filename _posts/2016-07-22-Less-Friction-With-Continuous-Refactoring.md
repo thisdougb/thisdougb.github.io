@@ -6,14 +6,15 @@ tags: ansible,role,roles,playbook,play,devops,engineering,cyclomatic,complexity,
 ---
 One of the perils of Agile development is rooted in the belief that progress should be measured by change and newness.
 Far be it for me to assume the persona of [Moros](http://greekmythology.wikia.com/wiki/Moros "Moros in Greek myth"), but I have a sense of déjà vu.
-Back in the days of 'physical tin' we'd regularly find forgotten yet business-critical applications churning away on PCs under vacant desks.   
+Back in the days of 'physical tin' we'd regularly find forgotten yet business-critical applications churning away on PCs under vacant desks.
 The application owner had long since left the company, and with it any hope of identifying what the PC was actually doing or its login.
+VMs and containers are even easier to leave behind.
 
 DevOps and Agile don't really say much about *technical debt*, it's not cool to talk housekeeping.
-Yet the amount of money (in time, energy, etc) wasted in looking after parallel/legacy infrastructure, whether physical or virtual, can be surprising.
-Virtual infrastructure is being left active in the wake of rapid Agile projects, as they up-version their way into production.
+Yet the amount of money (in time, energy, etc) wasted in looking after parallel legacy infrastructure, whether physical or virtual, can be surprising.
+Bits of virtual infrastructure is being left active in the wake of rapid Agile projects, as they up-version their way into production.
 
-Progress can be more pragmatically measured not in your newest piece of infrastructure widget, but the age of your oldest.
+Agility and progress can be more pragmatically measured not in your newest piece of infrastructure widget, but the age of your oldest.
 What portion of your infrastructure is simply baggage from the past?
 Can you visualise the wake left behind by your DevOps style, does it look proportional?
 
