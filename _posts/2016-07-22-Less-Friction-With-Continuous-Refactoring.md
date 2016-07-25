@@ -24,7 +24,7 @@ The degree of friction that resists development progress is an unfathomable func
 And it's this degree of friction, albeit unmeasurable, that indicates how agile a team or a company are.
 
 Technical debt is a recognised phenomenon in programming, particularly so in Agile development.
-When you take the quick option instead of considering the best option, you tend to create additional that will need to be addressed in the future.
+When you take the quick option instead of considering the best option, you tend to create additional work that will need to be addressed in the future.
 It's no different for us in DevOps, rattling through versioned VMs on a project you can quickly lose track of what's what and end up accidentally supporting all of them.
 
 Along with Continuous Integration and Continuous Deployment, I think we need to add Continuous Refactor to our workflows.
@@ -34,7 +34,7 @@ Rewriting methods and logic, with the benefits of hindsight, is one of the most 
 In the end I knew the logic so well that a re-write took only about an hour.
 
 What has my iPhone app experiment to do with DevOps?
-Well I was trying to minimise the technological span of the code, no v1.0 variables or methods hanging around like a bad smell.
+Well I was trying to minimise the technological span of the code.
 When that span is narrow, everything in the code/design is relevant, intuitive and understandable.
 Redundant variables and methods have been removed.
 Variables who's meaning has changed have been renamed appropriately.
@@ -83,7 +83,7 @@ path:  [0, 1, 3]
 path:  [0, 2, 3]
 ```
 
-Once we turn the code part of 'infrastructure as code' into data in its own right, we can begin to apply relevant rules and thresholds.
+Once we turn the code part of 'infrastructure as code' into data in its own right, we can analyse it and apply relevant rules and thresholds.
 Do we have too many logic branches based on supported software version numbers?
 Did our last commit increase complexity by 30%, if so automatically flag for peer review maybe?
-There are lots of possibilities when you treat configuration as data, but the overall aim must be to keep the *friction caused by the technological span* to a pragmatically low level.
+There are lots of possibilities when you treat configuration as data, but the overall aim must be to keep the *friction caused by technological span* to a pragmatically low level.
