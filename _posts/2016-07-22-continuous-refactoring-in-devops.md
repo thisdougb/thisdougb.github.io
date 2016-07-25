@@ -87,5 +87,5 @@ Once we turn the code part of 'infrastructure as code' into data in its own righ
 Do we have too many logic branches based on supported software version numbers?
 Did our last commit increase the use of custom shell scripts by 10%, if so automatically flag for peer review maybe?
 
-There are lots of possibilities when you treat configuration as data, but the overall aim must be to keep the *friction caused by technological span* to a pragmatically low level.
+There are many possibilities when you treat configuration code as data, but the overall aim must be to keep the *friction caused by technological span* to a pragmatically low level.
 A sort of cleaner style of Agile...
