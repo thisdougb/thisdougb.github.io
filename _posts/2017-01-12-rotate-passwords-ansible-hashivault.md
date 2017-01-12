@@ -34,9 +34,9 @@ So if we merge the DevOps thinking with the Sec thinking, we can state the DevSe
 6. Storing the password in a shared-secret vault is our break glass
 7. Integrating with AD would be great, allowing seamless access control
 
-What’s a good quality approach to ticking off all of the above points?   A full-fat automation approach of course.   
+What’s a good quality approach to ticking off all of the above points?
 
-The image shows running a password rotation as an authenticated user.   User ian being authorised to rotate passwords, and user dervla not being authorised.
+A full-fat automation approach of course.   The image shows running a password rotation as an authenticated user.   User ian being authorised to rotate passwords, and user dervla not being authorised.
 
 ![Authentication rotate password playbook examples](/images/rotate-password-play_800x600.png)
 
