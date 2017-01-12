@@ -11,7 +11,7 @@ The benefits of automation in a large infrastructure are easy to talk about, eas
 ### What’s an automation engineer to do?
 In most of the companies I’ve brought some automation into, everyone buys into automation except the Security guys.   The security shutters come down when a requirement for ssh and sudo are mentioned.
 
-But hang on a wee minute here….  Both ssh and sudo (correctly configured) are perfectly secure, way more secure than an unrotated database password or a ‘p@ssword123’ (yes, really!).    A re-evaluation of the risk landscape is required if we are blocked because Security perceive ssh/sudo to be an inherently insecure means of change deployment.
+But hang on a wee minute here….  Both ssh and sudo (correctly configured) are perfectly secure, way more secure than an stale/known database password or a ‘p@ssword123’ (yes, really!).    A re-evaluation of the risk landscape is required if we are blocked because Security perceive ssh/sudo to be an inherently insecure means of change deployment.
 
 Our company, our developers and our infrastructure are committed to becoming more Agile, the question for Security is what are you doing to become more Agile?
 
