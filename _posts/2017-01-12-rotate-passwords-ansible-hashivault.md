@@ -15,7 +15,8 @@ But hang on a wee minute here….  Both ssh and sudo (correctly configured) are 
 
 Our company, our developers and our infrastructure are committed to becoming more Agile, the question for Security is what are you doing to become more Agile?
 
-Of course we can turn this around, and offer the automation toolset to the Security guys to help them on their Agile journey.   Just think how much more effective security policy could be if it grew with product development, if it responded to changes as an integral component of the deployment pipeline.   We shouldn’t be viewing Security as distinct from Agile/DevOps, we should be helping those guys join the party.   We should be feeding the hand that bites us!
+Of course we can turn this around, and offer the automation toolset to the Security guys to help them on their Agile journey.   Just think how much more effective security policy could be if it grew with product development, if it responded to changes as an integral component of the deployment pipeline.   
+We shouldn’t be viewing Security as distinct from Agile/DevOps, we should be helping those guys join the party.   We should be feeding the hand that bites us!
 
 ### Example
 Let’s put a Security hat on, and walk in their shoes, while we ponder how hard password rotations are.
