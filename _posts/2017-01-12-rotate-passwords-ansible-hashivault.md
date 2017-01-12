@@ -36,7 +36,7 @@ So if we merge the DevOps thinking with the Sec thinking, we can state the DevSe
 
 What’s a good quality approach to ticking off all of the above points?   A full-fat automation approach of course.   
 
-![Authentication rotate password playbook examples]({{ site.url }}/images/rotate-password-play_800x600.png)
+![Authentication rotate password playbook examples](/images/rotate-password-play_800x600.png)
 
 ### Example Code
 Our context for this example is a tiered Java application with a mysql backend.   I’ll show password rotation of the backend mysql root password, but the same principle applies to the application node db credentials.
