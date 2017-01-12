@@ -42,6 +42,7 @@ Our context for this example is a tiered Java application with a mysql backend. 
 We have an existing HashiCorp Vault instance available (link to Github repo below).   HashiVault gives us the capability to use LDAP as an authentication backend, so we can point it at our Active Directory and leverage existing users and groups to provide access control.   
 
 This means the account initiating the password rotation task supplies their AD credentials which Ansible uses to authenticate against HashiVault.   We capture credentials using vars_prompt in the playbook
+
 ```
 # file: rotate password playbook
   vars_prompt:
@@ -53,7 +54,9 @@ This means the account initiating the password rotation task supplies their AD c
 	  prompt: "password: "
 	  private: yes
 ```
+
 The credentials are used to authenticate against HashiVault, so the playbook fails if the account has no access.   In this case access to the password in vault is locked down to the LDAP/AD group ‘production’.
+
 ```
 # commands: enabling HashiVault ldap authentication
 vault auth-enable ldap
@@ -66,7 +69,9 @@ vault write auth/ldap/config url="ldap://ldapserver" \
 vault write auth/ldap/groups/production policies=production
 vault write auth/ldap/groups/developer policies=developer
 ```
+
 With the above authentication configuration, we have an Ansible task to authentication against HashiVault and retrieve a token to be able to read the existing stored mysql password.
+
 ```
 # file: roles/mysql-rotate-pw/tasks/main.yml
 - name: "Authenticate ({{ username }}) against HashiVault"
@@ -85,7 +90,9 @@ With the above authentication configuration, we have an Ansible task to authenti
 - set_fact:
 	vault_user_token: "{{ auth_request_content.json.auth.client_token }}"
 ```
+
 With successful authentication the vault user token is then used to access the particular shared secret.   This is controlled by the HashiVault policy ‘production’ enabling write access to the dbnode path.
+
 ```
 # file: roles/mysql-rotate-pw/tasks/main.yml
 - name: Read existing mysql password from the HashiVault
@@ -98,7 +105,9 @@ With successful authentication the vault user token is then used to access the p
   register: vault_content
   delegate_to: localhost
 ```
+
 Some backends in HashiVault can auto generate passwords on a read access, but here I show password creation for the sake of clarity.
+
 ```
 # file: roles/mysql-rotate-pw/tasks/main.yml 
 - name: Generate new random password for mysql root user
@@ -106,13 +115,17 @@ Some backends in HashiVault can auto generate passwords on a read access, but he
   register: rand_pw_string
   delegate_to: localhost
 ```
+
 And using the retrieved (existing) password we can update the mysql instance with the new password.   Again, I am using this CLI method simply for clarity.
+
 ```
 # file: roles/mysql-rotate-pw/tasks/main.yml
 - name: Update mysql with the new root password
   command: "mysql -u root -p{{ vault_content.json.data.mysqlrootpw }} -e \"ALTER USER 'root'@'localhost' IDENTIFIED BY '{{ rand_pw_string.stdout }}'\""
 ```
+
 Finally we update the password stored in HashiVault.
+
 ```
 # file: roles/mysql-rotate-pw/tasks/main.yml
 - name: Store the new root password back into HashiVault
@@ -125,7 +138,9 @@ Finally we update the password stored in HashiVault.
     status_code: 204
   delegate_to: localhost
 ```
+
 Using our break glass account, for this example, we can demonstrate reading the secret directly from HashiVault.
+
 ```
 vaultnode $ vault auth -method=ldap username=sec_breakglass
 Password (will be hidden): 
@@ -137,6 +152,7 @@ Key             	Value
 ---             	-----
 mysqlrootpw     	ol4bLyVmcLfvvRd5DdVZ
 ```
+
 ### How we improved our lot
 We have achieved all of our seven DevSecOps requirements.   In a practical sense we’ve also improved the security of the infrastructure.   By simply making password rotation practically possible with both high frequency and on a large scale.
 
