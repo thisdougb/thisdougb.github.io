@@ -9,7 +9,7 @@ __Rotating application layer passwords is hard.__   Not because changing a passw
 The benefits of automation in a large infrastructure are easy to talk about, easy to sketch on a whiteboard.   The problems start when you attempt to implement your ideas, and then you can find yourself with a seemingly insurmountable sackful of (human) objections and (process) hurdles.
 
 ### What’s an automation engineer to do?
-In most of the companies I’ve brought some automation into, everyone buys into automation except the Security guys.   The security shutters come down when a requirement for ssh and sudo are mentioned.
+In most of the companies I’ve brought some automation into, everyone buys into automation except the Security guys.   The security shutters come down when a requirement for ssh or sudo is mentioned.
 
 But hang on a wee minute here….  Both ssh and sudo (correctly configured) are perfectly secure, way more secure than an stale/known database password or a ‘p@ssword123’ (yes, really!).    A re-evaluation of the risk landscape is required if we are blocked because Security perceive ssh/sudo to be an inherently insecure means of change deployment.
 
