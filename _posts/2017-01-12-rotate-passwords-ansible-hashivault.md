@@ -70,7 +70,7 @@ vault write auth/ldap/groups/production policies=production
 vault write auth/ldap/groups/developer policies=developer
 ```
 
-With the above authentication configuration, we have an Ansible task to authentication against HashiVault and retrieve a token to be able to read the existing stored mysql password.
+With the above authentication configuration, we have an Ansible task to authentice against HashiVault and retrieve a token to be able to read the existing stored mysql password.
 
 ```
 # file: roles/mysql-rotate-pw/tasks/main.yml
