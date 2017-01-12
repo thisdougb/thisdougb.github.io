@@ -74,12 +74,12 @@ With the above authentication configuration, we have an Ansible task to authenti
 
 ```
 # file: roles/mysql-rotate-pw/tasks/main.yml
-- name: "Authenticate ({{ username }}) against HashiVault"
+- name: "Authenticate ({% raw %}{{ username }}{% endraw %}) against HashiVault"
   uri:
-	url: "http://vault:8200/v1/auth/ldap/login/{{ username }}"
+	url: "http://vault:8200/v1/auth/ldap/login/{% raw %}{{ username }}{% endraw %}"
 	method: POST
 	body_format: json
-	body: '{"password": "{{ password }}" }'
+	body: '{"password": "{% raw %}{{ password }}{% endraw %}" }'
 	return_content: yes
 	status_code: 200
   register: auth_request_content
@@ -88,7 +88,7 @@ With the above authentication configuration, we have an Ansible task to authenti
 	# the vault_user_token is used for subsequent authentication to
 	# HashiVault, we set_fact here just to make for easier reading.
 - set_fact:
-	vault_user_token: "{{ auth_request_content.json.auth.client_token }}"
+	vault_user_token: "{% raw %}{{ auth_request_content.json.auth.client_token }}{% endraw %}"
 ```
 
 With successful authentication the vault user token is then used to access the particular shared secret.   This is controlled by the HashiVault policy ‘production’ enabling write access to the dbnode path.
@@ -99,7 +99,7 @@ With successful authentication the vault user token is then used to access the p
   uri:
   	url: "http://vault:8200/v1/secret/prod/apps/communote/dbnode"
   	method: GET
-	  HEADER_X-Vault-Token: "{{ vault_user_token }}"
+	  HEADER_X-Vault-Token: "{% raw %}{{ vault_user_token }}{% endraw %}"
   	return_content: yes
   	status_code: 200
   register: vault_content
@@ -121,7 +121,7 @@ And using the retrieved (existing) password we can update the mysql instance wit
 ```
 # file: roles/mysql-rotate-pw/tasks/main.yml
 - name: Update mysql with the new root password
-  command: "mysql -u root -p{{ vault_content.json.data.mysqlrootpw }} -e \"ALTER USER 'root'@'localhost' IDENTIFIED BY '{{ rand_pw_string.stdout }}'\""
+  command: "mysql -u root -p{% raw %}{{ vault_content.json.data.mysqlrootpw }}{% endraw %} -e \"ALTER USER 'root'@'localhost' IDENTIFIED BY '{% raw %}{{ rand_pw_string.stdout }}{% endraw %}'\""
 ```
 
 Finally we update the password stored in HashiVault.
@@ -132,9 +132,9 @@ Finally we update the password stored in HashiVault.
   uri:
   	url: "http://vault:8200/v1/secret/prod/apps/communote/dbnode"
     method: POST
-    HEADER_X-Vault-Token: "{{ vault_user_token }}"
+    HEADER_X-Vault-Token: "{% raw %}{{ vault_user_token }}{% endraw %}"
   	body_format: json
-  	body: '{ "mysqlrootpw": "{{ rand_pw_string.stdout }}" }'
+  	body: '{ "mysqlrootpw": "{% raw %}{{ rand_pw_string.stdout }}{% endraw %}" }'
     status_code: 204
   delegate_to: localhost
 ```
