@@ -41,7 +41,7 @@ A full-fat automation approach of course.   The image shows running a password r
 ![Authentication rotate password playbook examples](/images/rotate-password-play_800x600.png)
 
 ### Example Code
-Our context for this example is a tiered Java application with a mysql backend.   I’ll show password rotation of the backend mysql root password, but the same principle applies to the application node db credentials.
+Our context for this example is a tiered Java application with a mysql backend.   I’ll run through password rotation of the backend mysql root password, but the same principle applies to the application node db credentials.
 
 We have an existing HashiCorp Vault instance available (link to Github repo below).   HashiVault gives us the capability to use LDAP as an authentication backend, so we can point it at our Active Directory and leverage existing users and groups to provide access control.   
 
