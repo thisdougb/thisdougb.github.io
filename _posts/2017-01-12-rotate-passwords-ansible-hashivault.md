@@ -15,9 +15,9 @@ But hang on a wee minute here….  Both ssh and sudo (correctly configured) are 
 
 Our company, our developers and our infrastructure are committed to becoming more Agile, the question for Security is what are you doing to become more Agile?
 
-Flipping this around, what if we offered the automation toolset to the Security guys to help them on their Agile journey?   Just think how much more effective security policy could be if it grew with product development, if it responded to changes as an integral component of the deployment pipeline.   
+Flipping this around, what if we offered the automation toolset to the Security guys to help them on their Agile journey?  Security policy written in playbooks and Python, being light, modular, and agentless, and above all easily readble and runnable by devs.  Layering of Security developed playbooks, roles, and tags which mirrored the structure being used by DevOps.   
 
-Security policy written in playbooks and Python, being light, modular, and agentless, and above all easily readble and runnable by devs.  Layering of playbooks, roles, and tags which mirrored the structure being used by DevOps.   Only convention holds us back from unlocking this potential, there is no magic in traditional host/network security tooling on a practical level.
+Only convention holds us back from unlocking this potential, there is no magic in traditional host/network security tooling on a practical level.   Just think how much more effective security policy could be if it grew with product development, if it responded to changes as an integral component of the deployment pipeline.
 
 We shouldn’t be viewing Security as distinct from Agile/DevOps, we should be helping those guys join the party.   We should be feeding the hand that bites us!
 
