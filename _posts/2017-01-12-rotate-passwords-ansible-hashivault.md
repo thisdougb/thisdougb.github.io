@@ -33,11 +33,11 @@ So if we merge the DevOps thinking with the Sec thinking, we can state the DevSe
 
 1. Humans create poor quality passwords, let’s generate them automatically
 2. Continuous deployment of password rotations would be ideal
-4. An automated task would allow increased password rotation frequency
-5. An automated task can be tested, and will never go beyond its scope 
-6. Storing the password in a shared-secret vault is our break glass
-7. Integrating with AD would be great, allowing seamless runtime access control
-8. Passwords should not be stored in Git, deploy scripts, etc
+3. An automated task would allow increased password rotation frequency
+4. An automated task can be tested, and will never go beyond its scope 
+5. Storing the password in a shared-secret vault is our break glass
+6. Integrating with AD would be great, allowing seamless runtime access control
+7. Passwords should not be stored in Git, deploy scripts, etc
 
 What’s a good quality approach to ticking off all of the above points?
 
