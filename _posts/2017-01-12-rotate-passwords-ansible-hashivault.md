@@ -15,7 +15,9 @@ But hang on a wee minute here….  Both ssh and sudo (correctly configured) are 
 
 Our company, our developers and our infrastructure are committed to becoming more Agile, the question for Security is what are you doing to become more Agile?
 
-Of course we can turn this around, and offer the automation toolset to the Security guys to help them on their Agile journey.   Just think how much more effective security policy could be if it grew with product development, if it responded to changes as an integral component of the deployment pipeline.
+Flipping this around, what if we offered the automation toolset to the Security guys to help them on their Agile journey?   Just think how much more effective security policy could be if it grew with product development, if it responded to changes as an integral component of the deployment pipeline.   
+
+Security policy written in playbooks and Python, being light, modular, and agentless, and above all easily readble and runnable by devs.  Layering of playbooks, roles, and tags which mirrored the structure being used by DevOps.   Only convention holds us back from unlocking this potential, there is no magic in traditional host/network security tooling on a practical level.
 
 We shouldn’t be viewing Security as distinct from Agile/DevOps, we should be helping those guys join the party.   We should be feeding the hand that bites us!
 
@@ -34,11 +36,12 @@ So if we merge the DevOps thinking with the Sec thinking, we can state the DevSe
 4. An automated task would allow increased password rotation frequency
 5. An automated task can be tested, and will never go beyond its scope 
 6. Storing the password in a shared-secret vault is our break glass
-7. Integrating with AD would be great, allowing seamless access control
+7. Integrating with AD would be great, allowing seamless runtime access control
+8. Passwords should not be stored in Git, deploy scripts, etc
 
 What’s a good quality approach to ticking off all of the above points?
 
-A full-fat automation approach of course.   The image shows running a password rotation as an authenticated user.   User _ian_ being authorised to rotate passwords, and user _dervla_ not being authorised.
+A full-fat automation approach of course.   The image shows running a password rotation playbook as an AD authenticated user.   User _ian_ being authorised to rotate passwords, and user _dervla_ not being authorised.
 
 ![Authentication rotate password playbook examples](/images/rotate-password-play_800x600.png)
 
@@ -47,7 +50,7 @@ Our context for this example is a tiered Java application with a mysql backend. 
 
 We have an existing HashiCorp Vault instance available (link to Github repo below).   HashiVault gives us the capability to use LDAP as an authentication backend, so we can point it at our Active Directory and leverage existing users and groups to provide access control.   
 
-This means the account initiating the password rotation task supplies their AD credentials which Ansible uses to authenticate against HashiVault.   We capture credentials using vars_prompt in the playbook
+This means the account initiating the password rotation task supplies their AD credentials at runtime, which Ansible uses to authenticate against HashiVault.  We capture credentials using vars_prompt in the playbook
 
 ```
 # file: rotate password playbook
@@ -162,6 +165,6 @@ mysqlrootpw     	ol4bLyVmcLfvvRd5DdVZ
 ### How we improved our lot
 We have achieved all of our seven DevSecOps requirements.   In a practical sense we’ve also improved the security of the infrastructure.   By simply making password rotation practically possible with both high frequency and on a large scale.
 
-I hope this example is useful, in terms of reframing the DevOps approach.  For those of us in large environments, I think we need to consider whether DevOps is discriminatory.   DevSecOps is more inclusive, and a more realistic philosophy to helping companies move further along the Agile/Automation path.
+I hope this example is useful, in terms of reframing the DevOps approach.  For those of us in large environments, I think we need to consider whether DevOps is discriminatory.   DevSecOps is more inclusive, and a more realistic philosophy when helping companies move further along the Agile/Automation path.
 
 [full code on Github](https://github.com/thisdougb/ansible-hashicorp-rotate-password)
