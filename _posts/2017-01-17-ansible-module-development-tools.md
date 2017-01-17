@@ -16,6 +16,10 @@ $ mkdir library
 $ vi library/sec_suid.py
 $ vi test.yml
 $ ansible-playbook test.yml
+$ vi test.yml
+$ ansible-playbook test.yml
+$ vi test.yml
+$ ansible-playbook test.yml
 ```
 
 ## The Better Style
