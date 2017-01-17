@@ -14,6 +14,8 @@ $ mkdir sec_modules
 $ cd sec_modules
 $ mkdir library
 $ vi library/sec_suid.py
+$ vi test.yml
+$ ansible-playbook test.yml
 $ vi library/sec_suid.py
 $ ansible-playbook test.yml
 $ vi library/sec_suid.py
@@ -21,7 +23,7 @@ $ ansible-playbook test.yml
 $ vi library/sec_suid.py
 $ ansible-playbook test.yml
 ```
-*Have the ambition to go beyond cowboy status*
+*Have the ambition to go beyond cowboy status.*
 
 ## The Better Style
 Working within teams brings some additional overhead, but that overhead brings some benefits as dev projects get larger and more involved.   Well formatted code, good documentation, clear code logic, etc, all the things we know we should do but sometimes don’t.   There are many, many styles of team development, but pretty much all of it comes down to making clear and concise communications.
