@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Ansible Module Development Environment
+title: Ansible Module Development Tools
 permalink: /ansible/ansible-module-development-tools
 tags: ansible,devops,devsecops,engineering,development,developer,playbook,test,testing
 ---
-# Ansible Module Development Tools
-
 Setting up your environment for Ansible module development is relatively straightforward, but there are some things which will make it easier to develop higher quality modules.
 
 ## Cowboy Style
