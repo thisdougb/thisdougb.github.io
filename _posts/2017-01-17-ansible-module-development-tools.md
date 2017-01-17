@@ -14,13 +14,14 @@ $ mkdir sec_modules
 $ cd sec_modules
 $ mkdir library
 $ vi library/sec_suid.py
-$ vi test.yml
+$ vi library/sec_suid.py
 $ ansible-playbook test.yml
-$ vi test.yml
+$ vi library/sec_suid.py
 $ ansible-playbook test.yml
-$ vi test.yml
+$ vi library/sec_suid.py
 $ ansible-playbook test.yml
 ```
+*Have the ambition to go beyond cowboy status*
 
 ## The Better Style
 Working within teams brings some additional overhead, but that overhead brings some benefits as dev projects get larger and more involved.   Well formatted code, good documentation, clear code logic, etc, all the things we know we should do but sometimes don’t.   There are many, many styles of team development, but pretty much all of it comes down to making clear and concise communications.
@@ -32,7 +33,7 @@ Poor code logic invites similar problems.   When you return to poor quality code
 ![Developing Ansible modules starts with a plan](/images/ansible_module_dev_coffee.jpg)
 *Developing Ansible modules starts with a plan, and a coffee.*
 
-Ansible provides a couple of tools to help with module development.   To set these up, clone the Ansible repo somewhere outside of your dev area.   This will give access to module testing tools, but keeping that repo away from the project .git instance.
+Ansible provides a couple of tools to help with module development, when you're ready to start coding.   To set these up, clone the Ansible repo somewhere outside of your dev area.   This will give access to module testing tools, but keeping that repo away from the project .git instance.
 
 ```
 $ git clone git@github.com:ansible/ansible.git ~/
