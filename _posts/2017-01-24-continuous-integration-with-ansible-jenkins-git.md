@@ -45,7 +45,8 @@ The Private Small Team workflow simply involves a central repository which devel
              |----------o   | 
                (JRA-797)    |
                             \-----o------> 
-                                (JRA-780)
+                                (JRA-780)    
+                                                   o = commit
 ```
 *feature branches from master, then merge back*
 
