@@ -38,13 +38,14 @@ Let's start with the [Private Small Team](https://git-scm.com/book/en/v2/Distrib
 The Private Small Team workflow simply involves a central repository which developers pull the latest code from, and then push back changes using feature branches.   Pushing feature branches allows an automated integration pipeline (Jenkins) to test and validate changes, without potentially messing up ‘master’.
 
 ```
-  master:  -----o-----o------o-------o-----o--------->
-                |     |\    /             /
-(branches)      |     | \--/-------o-----o (JRA-796)
-                |     |   /
-                |-----|--o (JRA-797)
-                      |
-                      \-----o------> (JRA-780)
+  master:  -----o----------------o--------------------o--------->
+                |               /|\                  /
+(branches)      |              / | \----------o-----o 
+                |             /  |         (JRA-796) 
+                |------------o   | 
+                    (JRA-797)    |
+                                 \-----o------> 
+                                     (JRA-780)
 ```
 *feature branches from master, then merge back*
 
