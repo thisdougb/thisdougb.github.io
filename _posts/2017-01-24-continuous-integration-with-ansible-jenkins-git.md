@@ -51,7 +51,7 @@ The Private Small Team workflow simply involves a central repository which devel
 *feature branches from master, then merge back*
 
 ```
-  master:  --o------------------o------------------------------>
+  master:  --o------------------o-------------------------->
              |                 /
 (branches)   |                /
              |         --------------------
