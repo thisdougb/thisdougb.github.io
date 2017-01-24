@@ -67,7 +67,7 @@ The Private Small Team workflow simply involves a central repository which devel
                                                    / = push
                                                    | = pull
 ```
-*zooming in with ascii art, where Jenkins fits*
+*zooming in, where Jenkins fits*
 
 If automated testing/auditing in the Jenkins pipeline is comprehensive enough, continuous integration of feature branch commits into ‘master’ may be possible.   Otherwise if a manual authorisation step is required (often for compliance purposes), we can implement this as part of the workflow with a Jira ticket state change (triggering the git merge to master).
 
