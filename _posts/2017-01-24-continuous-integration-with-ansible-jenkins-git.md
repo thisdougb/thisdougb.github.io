@@ -50,24 +50,6 @@ The Private Small Team workflow simply involves a central repository which devel
 ```
 *feature branches from master, then merge back*
 
-```
-  master:  --o------------------o-------------------------->
-             |                 /
-(branches)   |                /
-             |         --------------------
-             |         | Jenkins Pipeline |
-             |         --------------------
-             |            /
-             |           /
-             |----------o
-               (JRA-797)
-                       
-                      
-                                                   o = commit
-                                                   / = push
-                                                   | = pull
-```
-*zooming in, where Jenkins fits*
 
 If automated testing/auditing in the Jenkins pipeline is comprehensive enough, continuous integration of feature branch commits into ‘master’ may be possible.   Otherwise if a manual authorisation step is required (often for compliance purposes), we can implement this as part of the workflow with a Jira ticket state change (triggering the git merge to master).
 
@@ -117,6 +99,25 @@ Jenkins, like Git, starts off pretty much as a blank canvas.   There is no corre
 For our purposes we want to keep Jira updated with progress (audit trail), and test our Ansible playbook components.   If any step fails then we simply stop and notify the Jira ticket, which notifies the relevant people.   On an integration failure, the code is fixed and re-pushed to the feature branch.
 
 The integration itself (merging the change into production) is logically tied to the Jira ticket status.  If all tests pass, then the status will be OK and the merge can happen automatically.   So long as the Jira workflow is setup such that no-one else can modify the workflow status, then it shouldn't be possible to circumvent our automated testing and slip something into production.
+
+```
+  master:  --o------------------o-------------------------->
+             |                 /
+(branches)   |                /
+             |         --------------------
+             |         | Jenkins Pipeline |
+             |         --------------------
+             |            /
+             |           /
+             |----------o
+               (JRA-797)
+                       
+                      
+                                                   o = commit
+                                                   / = push
+                                                   | = pull
+```
+*zooming in, where Jenkins fits*
 
 Jenkins pipelines are built as code, stored in a repo, and pulled automatically when the job is run.   The pseudo-code of our Jenkins pipeline:
 
