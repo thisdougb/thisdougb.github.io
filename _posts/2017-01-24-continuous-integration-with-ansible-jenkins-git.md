@@ -6,6 +6,8 @@ tags: ansible,jenkins,git,continuous,integration,pipeline,devops,engineering
 ---
 The benefit of sketching out your integration/deployment process (the sequence of steps), is that intuitively you will discover the tasks that can be automated.   The more tasks that can be safely automated the more 'continuous' the integration of changes to production will be.
 
+This is not a definitive guide to continuous integration workflows in any way, nor is it intended to be 'best practice'.   It is intended merely to expose some of the human aspects of continuous integration, and raise some points for consideration.
+
 ![Continuous Integration pipeline planning](/images/ci_pipeline_planning_800x600.jpg)
 *Continuous Integration pipeline planning*
 
@@ -18,8 +20,6 @@ To avoid paralysis in the face of multiple interrelated chicken and egg decision
 To work well a CI workflow depends on people doing what they say they will do.   DevOps people should be lazy (aka efficient), striving for the minimal effort that provides greatest gains.   A workflow that is light and efficient, with repetitive boring tasks automated, has a good chance of success.   Stand-ups become a vital hub, because there is a genuine need to communicate and coordinate code/feature/integration state.
 
 Begin with the basic components of your overall workflow (*code -> git repos -> testing -> prod*), with the expectation of moulding them as understanding develops.   It’s all experience and learning, which feeds back into the design as an interative process.   With open tools such as Git, Jenkins, etc, there is no definitely correct way to do things.
-
-This is not definitive in any way, nor is it intended to be 'best practice'.   It is intended merely to expose some of the human aspects of continuous integration, and raise some points for consideration.
 
 Summary of desired workflow:
 
@@ -48,7 +48,6 @@ The Private Small Team workflow simply involves a central repository which devel
                                                    o = commit
 ```
 *feature branches from master, then merge back*
-
 
 If automated testing/auditing in the Jenkins pipeline is comprehensive enough, continuous integration of feature branch commits into ‘master’ may be possible.   Otherwise if a manual authorisation step is required (often for compliance purposes), we can implement this as part of the workflow with a Jira ticket state change (triggering the git merge to master).
 
