@@ -7,16 +7,17 @@ tags: ansible,jenkins,git,continuous,integration,pipeline,devops,engineering
 The benefit of sketching out your integration/deployment process (the sequence of steps), is that intuitively you will discover the tasks that can be automated.   The more tasks that can be safely automated the more 'continuous' the integration of changes to production will be.
 
 ![Continuous Integration pipeline planning](/images/ci_pipeline_planning_800x600.jpg)
+*Continuous Integration pipeline planning*
 
 If you don’t yet have an integration pipeline then creating one from scratch can be confusing.   Particularly so, if you don’t come from a development background, or are new to Git and deployment of code to production.  I am using 'production' as a catch-all term for 'the code-storage-place that must remain stable'.
 
 What should your Source Code Management workflow look like?   What's the best repository structure, which depends on or informs  how the team share code?   Should the integration pipeline (Jenkins) be defined before or after the source code control (Git) workflow?   
 
-To avoid paralysis in the face of multiple interrelated chicken and egg decisions, just apply some Agile thinking.   Iterate!
+To avoid paralysis in the face of multiple interrelated chicken and egg decisions, just apply some Agile thinking.   *Iterate!*
 
-To work well a CI workflow depends on people doing what they say they will do.   Developers should be lazy (aka efficient), striving for the minimal effort that provides greatest gains.   A workflow that is light and efficient, with repetitive boring tasks automated, has a good chance of success.   Stand-ups become a vital hub, because there is a genuine need to communicate and coordinate code/feature/integration state.
+To work well a CI workflow depends on people doing what they say they will do.   DevOps people should be lazy (aka efficient), striving for the minimal effort that provides greatest gains.   A workflow that is light and efficient, with repetitive boring tasks automated, has a good chance of success.   Stand-ups become a vital hub, because there is a genuine need to communicate and coordinate code/feature/integration state.
 
-Begin with the basic components of your overall workflow, with the expectation of moulding them as understanding develops.   The important thing is to *do something*, even if it turns out to be not quite what you end up with.   It’s all experience and learning, which feeds back into the design as an interative process.   With open tools such as Git, Jenkins, etc, there is no definitely correct way to do things.
+Begin with the basic components of your overall workflow (*code -> git repos -> testing -> prod*), with the expectation of moulding them as understanding develops.   It’s all experience and learning, which feeds back into the design as an interative process.   With open tools such as Git, Jenkins, etc, there is no definitely correct way to do things.
 
 This is not definitive in any way, nor is it intended to be 'best practice'.   It is intended merely to expose some of the human aspects of continuous integration, and raise some points for consideration.
 
@@ -34,9 +35,20 @@ Summary of desired workflow:
 
 Let's start with the [Private Small Team](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project) workflow, which comes with some basic rules to make team-life easier.   Your own team rules should fit on a single A4 sheet, and pinned up with clear line of sight.   The team own the workflow, it's their responsibility maintain its effectiveness in the face of corporate compliance.
 
-The Private Small Team workflow simply involves a central repository which developers pull the latest code from, and then push back changes using topic branches.   Pushing topic branches allows an automated integration pipeline (Jenkins) to test and validate changes, without potentially messing up ‘master’.
+The Private Small Team workflow simply involves a central repository which developers pull the latest code from, and then push back changes using feature branches.   Pushing feature branches allows an automated integration pipeline (Jenkins) to test and validate changes, without potentially messing up ‘master’.
 
-If automated testing/auditing in the Jenkins pipeline is comprehensive enough, continuous integration of topic commits into ‘master’ may be possible.   Otherwise if a manual authorisation step is required (often for compliance purposes), we can implement this as part of the workflow with a Jira ticket state change (triggering the git merge to master).
+```
+  master:  -----o-----o------o-------o-----o--------->
+                |     |\    /             /
+(branches)      |     | \--/-------o-----o (JRA-796)
+                |     |   /
+                |-----|--o (JRA-797)
+                      |
+                      \-----o------> (JRA-780)
+```
+*feature branches from master, then merge back*
+
+If automated testing/auditing in the Jenkins pipeline is comprehensive enough, continuous integration of feature branch commits into ‘master’ may be possible.   Otherwise if a manual authorisation step is required (often for compliance purposes), we can implement this as part of the workflow with a Jira ticket state change (triggering the git merge to master).
 
 Remember, the goal is maintaining production stability rather than blindy achieving fully continuous integration.
 
@@ -66,7 +78,7 @@ $ git add roles/mysql-server/tasks/main.yml
 $ git commit -m ‘JRA-780 Enable general query log in mysql server, to log all sql statements to /var/lib/mysql/general.log’
 ```
 
-Push the changes back to the centralised repo, which creates the topic branch on origin.
+Push the changes back to the centralised repo, which creates the feature branch on origin.
 
 ```
 $ git push -u origin jra-780-mysql-general-log
@@ -81,7 +93,7 @@ The state at this point is that the central 'master' repo branch remains untouch
 ## The Integration Pipeline
 Jenkins, like Git, starts off pretty much as a blank canvas.   There is no correct pipeline, only combinations of tasks that are suitable for your desired workflow idea.   Planning is important, as is refactoring when things are no longer obvious or have too many logical branches.
 
-For our purposes we want to keep Jira updated with progress (audit trail), and test our Ansible playbook components.   If any step fails then we simply stop and notify the Jira ticket, which notifies the relevant people.   On an integration failure, the code is fixed and re-pushed to the topic branch.
+For our purposes we want to keep Jira updated with progress (audit trail), and test our Ansible playbook components.   If any step fails then we simply stop and notify the Jira ticket, which notifies the relevant people.   On an integration failure, the code is fixed and re-pushed to the feature branch.
 
 The integration itself (merging the change into production) is logically tied to the Jira ticket status.  If all tests pass, then the status will be OK and the merge can happen automatically.   So long as the Jira workflow is setup such that no-one else can modify the workflow status, then it shouldn't be possible to circumvent our automated testing and slip something into production.
 
