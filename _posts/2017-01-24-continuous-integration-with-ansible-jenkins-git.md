@@ -23,14 +23,12 @@ This is not definitive in any way, nor is it intended to be 'best practice'.   I
 
 Summary of desired workflow:
 
-*
-1. The Communote team want to turn on mysql query logging on their backend servers, so create a Jira ticket for the task.
-2. Sam (DevOps) modifies the existing Ansible cnote-mysql-config role.
-3. Sam commits then pushes this change to the shared remote repository (Git) of Communote infrastructure code.
-4. The automation pipeline (Jenkins), woken up by a git hook, tests the new code and, if successful, merges the new commit into the producion repository.
-5. The Jira ticket for the change, containing a full audit trail, is set to completed.
-6. At some later point, Chris (DevOps) runs the playbook (Ansible Tower) to execute the change on the live servers.
-*
+1. *The Communote team want to turn on mysql query logging on their backend servers, so create a Jira ticket for the task.*
+2. *Sam (DevOps) modifies the existing Ansible cnote-mysql-config role.*
+3. *Sam commits then pushes this change to the shared remote repository (Git) of Communote infrastructure code.*
+4. *The automation pipeline (Jenkins), woken up by a git hook, tests the new code and, if successful, merges the new commit into the producion repository.*
+5. *The Jira ticket for the change, containing a full audit trail, is set to completed.*
+6. *At some later point, Chris (DevOps) runs the playbook (Ansible Tower) to execute the change on the live servers.*
 
 ## What does our Git workflow look like?
 
