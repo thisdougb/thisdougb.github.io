@@ -32,7 +32,7 @@ Summary of desired workflow:
 6. At some later point, Chris (DevOps) runs the playbook (Ansible Tower) to execute the change on the live servers.
 *
 
-## What does the Git structure look like?
+## What does our Git workflow look like?
 
 Let's start with the [Private Small Team](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project) workflow, which comes with some basic rules to make team-life easier.   Your own team rules should fit on a single A4 sheet, and pinned up with clear line of sight.   The team own the workflow, it's their responsibility maintain its effectiveness in the face of corporate compliance.
 
