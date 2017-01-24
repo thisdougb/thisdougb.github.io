@@ -16,7 +16,7 @@ To avoid paralysis in the face of multiple interrelated chicken and egg decision
 
 Begin with the basic components of your overall workflow, with the expectation of moulding them as understanding develops.   The important thing is to *do something*, even if it turns out to be not quite what you end up with.   It’s all experience and learning, which feeds back into the design as an interative process.   With open tools such as Git, Jenkins, etc, there is no definitely correct way to do things.
 
-I'm going to describe a simple workflow, which will encompass making code commits and integrating them into our production repository.   This gives us a starting point and model to morph, tweak, adjust, etc.   From this we can create a tailored set of 'the rules', which contributors agree to follow to make the whole thing work.   Creating 'the rules' should be a group task, but not necessarily the same group responsible for implementing the rules.
+I'm going to describe a simple workflow, which will encompass making code commits and integrating them into our production repository.   This gives us a starting point and model to morph, tweak, adjust, etc.   From this we can create a tailored set of 'the rules', which contributors agree to follow to make the whole thing work.
 
 This is not definitive in any way, nor is it intended to be 'best practice'.   It is intended merely to expose some of the human aspects of continuous integration, and raise some points for consideration.
 
@@ -34,7 +34,7 @@ Summary of desired workflow:
 
 To work well a Git workflow depends on people doing what they say they will do.   Developers should be lazy (aka efficient), striving for the minimal effort that provides greatest gains.   A workflow that is light and efficient, with repetitive boring tasks automated, has a good chance of success.   Stand-ups become a vital hub, because there is a genuine need to communicate and coordinate code/feature/integration state.
 
-A good Git workflow matters, because it saves time and team conflict.   Let's start with the [Private Small Team](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project) workflow, which comes with some basic rules to make team-life easier.   Your own team rules should fit on a single A4 sheet, and pinned up with clear line of sight.   The team own the workflow, it's their responsibility maintain its effectiveness and corporate compliance.
+Let's start with the [Private Small Team](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project) workflow, which comes with some basic rules to make team-life easier.   Your own team rules should fit on a single A4 sheet, and pinned up with clear line of sight.   The team own the workflow, it's their responsibility maintain its effectiveness in the face of corporate compliance.
 
 The Private Small Team workflow simply involves a central repository which developers pull the latest code from, and then push back changes using topic branches.   Pushing topic branches allows an automated integration pipeline (Jenkins) to test and validate changes, without potentially messing up ‘master’.
 
@@ -131,5 +131,5 @@ node {
 
 The possibilities in a Jenkins pipeline are vast.   We should design the pipeline logic, like any code, so that it's clear what's going on.   There's nothing magic about it, it's really just automating what you would have done manually.   The tasks and sub-tasks can be realised with plugins and scripts, which drop you into a shell with access to a git checkout of the feature branch.
 
-A continuous integration pipeline is a trade off between extra care with the details (commit messages, code formatting, etc) and no longer having to do the boring stuff (manual integration testing, audit logging, etc).   At it's heart, though, are the people contributing code, and their feeling that the trade off is in their favour.
+A continuous integration pipeline is a trade off between extra effort with the details (commit messages, code formatting, etc) and no longer having to do the boring stuff (manual integration testing, audit logging, etc).   At it's heart, though, are the people contributing code, and their feeling that the trade off is in their favour.
 
