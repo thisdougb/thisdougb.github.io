@@ -78,14 +78,14 @@ To gitolite@gitserver:communote
 Branch jra-780-mysql-general-log set up to track remote branch jra-780-mysql-general-log from origin.
 ```
 
-The state at this point is that the central 'master' repo branch remains untouched (therefore stable).  The central repo (origin) now has a new branch called jra-780-mysql-general-log, which will now undergo a series of manipulations and tests by our Jenkins pipeline.
+The state at this point is that the central 'master' repo branch remains untouched, therefore stable.  The central repo now has a new branch called *jra-780-mysql-general-log*, which will now undergo a series of manipulations and tests as coded in our Jenkins pipeline.
 
 ## The Integration Pipeline
-Jenkins, like Git, starts off pretty much as a blank canvas.   There is no correct pipeline, only combinations of tasks that are suitable for your desired workflow idea.   In addition, different products and even different types of changes may result in a handful of Jenkins pipelines.   Planning is important, as is refactoring when things are no longer obvious or have too many logical branches.
+Jenkins, like Git, starts off pretty much as a blank canvas.   There is no correct pipeline, only combinations of tasks that are suitable for your desired workflow idea.   Planning is important, as is refactoring when things are no longer obvious or have too many logical branches.
 
 For our purposes we want to keep Jira updated with progress (audit trail), and test our Ansible playbook components.   If any step fails then we simply stop and notify the Jira ticket, which notifies the relevant people.   On an integration failure, the code is fixed and re-pushed to the topic branch.
 
-The integration itself (merging the change into production) is logically tied to the Jira ticket status.  If all tests pass, then the status will be OK and the merge can happen automatically.   So long as the Jira workflow is setup such that no-one else can modify the workflow status, then it shouldn't be possible to circumvent our automated testing.
+The integration itself (merging the change into production) is logically tied to the Jira ticket status.  If all tests pass, then the status will be OK and the merge can happen automatically.   So long as the Jira workflow is setup such that no-one else can modify the workflow status, then it shouldn't be possible to circumvent our automated testing and slip something into production.
 
 Jenkins pipelines are built as code, stored in a repo, and pulled automatically when the job is run.   The pseudo-code of our Jenkins pipeline:
 
@@ -128,3 +128,8 @@ node {
 	}
 }
 ```
+
+The possibilities in a Jenkins pipeline are vast.   We should design the pipeline logic, like any code, so that it's clear what's going on.   There's nothing magic about it, it's really just automating what you would have done manually.   The tasks and sub-tasks can be realised with plugins and scripts, which drop you into a shell with access to a git checkout of the feature branch.
+
+A continuous integration pipeline is a trade off between extra care with the details (commit messages, code formatting, etc) and no longer having to do the boring stuff (manual integration testing, audit logging, etc).   At it's heart, though, are the people contributing code, and their feeling that the trade off is in their favour.
+
