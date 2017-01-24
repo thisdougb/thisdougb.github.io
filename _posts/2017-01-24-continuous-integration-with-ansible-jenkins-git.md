@@ -6,7 +6,7 @@ tags: ansible,jenkins,git,continuous,integration,pipeline,devops,engineering
 ---
 The benefit of sketching out your integration/deployment process (the sequence of steps), is that intuitively you will discover the tasks that can be automated.   The more tasks that can be safely automated the more 'continuous' the integration of changes to production will be.
 
-This is not a definitive guide to continuous integration workflows in any way, nor is it intended to be 'best practice'.   It is intended merely to expose some of the human aspects of continuous integration, and raise some points for consideration.
+This is not a definitive guide to continuous integration workflows in any way, nor is it intended to be 'best practice'.   It is intended merely as a primer on the higher level view of where Git/Jenkins/Jira fit in, as many come to DevOps with no prior use of these tools.
 
 ![Continuous Integration pipeline planning](/images/ci_pipeline_planning_800x600.jpg)
 *Continuous Integration pipeline planning*
