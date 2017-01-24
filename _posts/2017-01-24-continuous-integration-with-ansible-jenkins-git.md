@@ -14,9 +14,9 @@ What should your Source Code Management workflow look like?   What's the best re
 
 To avoid paralysis in the face of multiple interrelated chicken and egg decisions, just apply some Agile thinking.   Iterate!
 
-Begin with the basic components of your overall workflow, with the expectation of moulding them as understanding develops.   The important thing is to *do something*, even if it turns out to be not quite what you end up with.   It’s all experience and learning, which feeds back into the design as an interative process.   With open tools such as Git, Jenkins, etc, there is no definitely correct way to do things.
+To work well a CI workflow depends on people doing what they say they will do.   Developers should be lazy (aka efficient), striving for the minimal effort that provides greatest gains.   A workflow that is light and efficient, with repetitive boring tasks automated, has a good chance of success.   Stand-ups become a vital hub, because there is a genuine need to communicate and coordinate code/feature/integration state.
 
-I'm going to describe a simple workflow, which will encompass making code commits and integrating them into our production repository.   This gives us a starting point and model to morph, tweak, adjust, etc.   From this we can create a tailored set of 'the rules', which contributors agree to follow to make the whole thing work.
+Begin with the basic components of your overall workflow, with the expectation of moulding them as understanding develops.   The important thing is to *do something*, even if it turns out to be not quite what you end up with.   It’s all experience and learning, which feeds back into the design as an interative process.   With open tools such as Git, Jenkins, etc, there is no definitely correct way to do things.
 
 This is not definitive in any way, nor is it intended to be 'best practice'.   It is intended merely to expose some of the human aspects of continuous integration, and raise some points for consideration.
 
@@ -30,9 +30,7 @@ Summary of desired workflow:
 6. At some later point, Chris (DevOps) runs the playbook (Ansible Tower) to execute the change on the live servers.
 
 
-## What does the Git workflow look like?
-
-To work well a Git workflow depends on people doing what they say they will do.   Developers should be lazy (aka efficient), striving for the minimal effort that provides greatest gains.   A workflow that is light and efficient, with repetitive boring tasks automated, has a good chance of success.   Stand-ups become a vital hub, because there is a genuine need to communicate and coordinate code/feature/integration state.
+## What does the Git structure look like?
 
 Let's start with the [Private Small Team](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project) workflow, which comes with some basic rules to make team-life easier.   Your own team rules should fit on a single A4 sheet, and pinned up with clear line of sight.   The team own the workflow, it's their responsibility maintain its effectiveness in the face of corporate compliance.
 
