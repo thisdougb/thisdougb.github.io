@@ -186,7 +186,7 @@ commit 570be18887419b93be307f72e09115d45b72d5a8
 Author: Chris Communote <chris@example.com>
 Date:   Wed Jan 25 11:22:11 2017 +0000
 
-    jra-780 enable mysql general query log
+    jra-780 Enable general query log in mysql server, to log all sql statements to /var/lib/mysql/general.log
 
 M       roles/mysql/tasks/main.yml
 
