@@ -4,15 +4,14 @@ title: Continuous Integration With Ansible Jenkins Git
 permalink: /ansible/2017-01-24-continuous-integration-with-ansible-jenkins-git
 tags: ansible,jenkins,git,continuous,integration,pipeline,devops,engineering
 ---
-The benefit of sketching out your integration/deployment process (the sequence of steps), is that you are forced to start with the general and then define the detail.   It is more intuitive to define the sequence of steps as a series of tasks (code, commands) and transitions (of state, authority, completeness, etc).   
+The benefit of sketching out your integration/deployment process (the sequence of steps), is that you are forced to start with the general and then define the detail.   It is more intuitive to define the sequence of steps as a series of tasks (code, commands) and transitions (of state, authority, completeness, etc).   The more tasks and transitions that can be safely automated the more 'continuous' the integration of changes to production will be.   
 
-The more tasks and transitions that can be safely automated the more 'continuous' the integration of changes to production will be.   I am using 'production' as a catch-all term for 'the code-storage-place that must remain stable'.   In addition, consider that some code changes may suit automated integration, while others don't.
-
-This post is not intended as a definitive guide to continuous integration workflows.   It is intended merely to bring some familiarity to the whole business of automated code release, and of where Git/Jenkins/Jira fit in.   In particular, release of Ansible code.   Many people coming to DevOps and automation are still on a 'dev' learning curve.
+I am using 'production' as a catch-all term for 'the code-storage-place that must remain stable'.   In addition, consider that some code changes may suit automated integration, while others don't.
 
 ![Continuous Integration pipeline planning](/images/ci_pipeline_planning_800x600.jpg)
 *Continuous Integration pipeline planning*
 
+This post is not intended as a definitive guide to continuous integration workflows.   It is intended merely to bring some familiarity to the whole business of automated code release, and of where Git/Jenkins/Jira fit in.   In particular, release of Ansible code.   Many people coming to DevOps and automation are still on a 'dev' learning curve.
 
 What should your Source Code Management workflow look like?   What's the best repository structure, which depends on or informs  how the team share code?   Should the integration pipeline (Jenkins) be defined before or after the source code control (Git) workflow?
 
