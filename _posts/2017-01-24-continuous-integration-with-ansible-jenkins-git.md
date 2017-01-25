@@ -80,7 +80,7 @@ Make, test and commit the changes locally.   The commit message format is also p
 ```
 $ vi roles/mysql-server/tasks/main.yml
 $ git add roles/mysql-server/tasks/main.yml
-$ git commit -m ‘JRA-780 Enable general query log in mysql server, to log all sql statements to /var/lib/mysql/general.log’
+$ git commit -m ‘jra-780 Enable general query log in mysql server, to log all sql statements to /var/lib/mysql/general.log’
 ```
 
 Push the changes back to the centralised repo, which creates the feature branch on origin.
