@@ -6,7 +6,7 @@ tags: ansible,jenkins,git,continuous,integration,pipeline,devops,engineering
 ---
 The benefit of sketching out your integration/deployment process (the sequence of steps), is that you are forced to start with the general and then define the detail.   It is more intuitive to define the sequence of steps as a series of tasks (code, commands) and transitions (of state, authority, completeness, etc).   The more tasks and transitions that can be safely automated the more 'continuous' the integration of changes to production will be.   
 
-I am using 'production' as a catch-all term for 'the code-storage-place that must remain stable'.   In addition, consider that some code changes may suit automated integration, while others don't.
+I am using 'production' as a catch-all term for *the code-storage-place that must remain stable*.   In addition, consider that some code changes may suit automated integration, while others don't.
 
 ![Continuous Integration pipeline planning](/images/ci_pipeline_planning_800x600.jpg)
 *Continuous Integration pipeline planning*
