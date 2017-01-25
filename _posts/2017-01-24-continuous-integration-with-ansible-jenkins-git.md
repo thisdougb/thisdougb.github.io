@@ -95,7 +95,7 @@ Branch jra-780-mysql-general-log set up to track remote branch jra-780-mysql-gen
 
 The state at this point is that the central 'master' repo branch remains untouched, therefore stable.  The central repo now has a new branch called *jra-780-mysql-general-log*, which will now undergo a series of manipulations and tests as coded in our Jenkins pipeline.
 
-## Automated Testing
+## The Jenkins Bit
 Jenkins, like Git, starts off pretty much as a blank canvas.   There is no correct pipeline, only combinations of tasks that are suitable for your desired workflow idea.   Planning is important, as is refactoring when things are no longer obvious or have too many logical branches.
 
 For our purposes we want to keep Jira updated with progress (audit trail), and test our Ansible playbook components.   If any step fails then we simply stop and notify the Jira ticket, which notifies the relevant people.   On an integration failure, the code is fixed and re-pushed to the feature branch.
