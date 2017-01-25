@@ -162,6 +162,7 @@ node {
 	}
 }
 ```
+*Jenkins pipeline pseduo-code*
 
 The final stage of our pipeline can automatically merge our tested feature branch back into the master branch, which integrates it into production.   Our master branch contains the commit history of the feature branch, so our code has a full audit trail.
 
@@ -190,6 +191,7 @@ Date:   Wed Jan 25 11:22:11 2017 +0000
 M       roles/mysql/tasks/main.yml
 
 ```
+*Manually merging the feature branch into master*
 
 The possibilities in a Jenkins pipeline are vast.   We should design the pipeline logic, like any code, so that it's clear what's going on.   There's nothing magic about it, it's really just automating what you would have (should have!) done manually.   The tasks and sub-tasks can be realised with plugins and scripts, which drop you into a shell with access to a git checkout of the feature branch.
 
