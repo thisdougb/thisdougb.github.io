@@ -23,7 +23,7 @@ To work well, a CI workflow depends on people doing what they say they will do. 
 
 Stand-ups become a vital hub, because there is a genuine need to communicate and coordinate code/feature/integration state.   CI pipelines are simply tools to help humans be more effective.   People are an essential element to continuous integration, whether actioning transition states, iterating workflow improvements, or communicating effectively.
 
-Begin with the basic components of your overall workflow (*code -> git repos -> testing -> prod*), with the expectation of moulding them as ideas develop.   It’s all experience and learning, which feeds back into the workflow as an iterative process.   With open tools such as Git, Jenkins, etc, there is no definitely correct way to do things.
+Begin with the basic components of your overall workflow (*code -> git repos -> testing -> prod*), with the expectation of moulding them as ideas develop.   It’s all experience and learning, which feeds back into the workflow design as an iterative process.   With open tools such as Git, Jenkins, etc, there is no definitely correct way to do things.
 
 Summary of desired workflow:
 
@@ -44,14 +44,14 @@ The Private Small Team workflow simply involves a central repository which devel
   master:  --o--------------o--------------------o--------->
              |             /|\                  /
 (branches)   |            / | \----------o-----o 
-             |           /  |         (JRA-796) 
+             |           /  |         (JRA-781) 
              |----------o   | 
-               (JRA-797)    |
+               (JRA-780)    |
                             \-----o------> 
-                                (JRA-780)    
+                                (JRA-783)    
                                                    o = commit
 ```
-*feature branches from master, then merge back*
+*Feature branches from master, then merge back*
 
 If automated testing in the Jenkins pipeline satisfies corporate compliance, continuous integration of feature branch commits into ‘master’ may be possible.   Otherwise if a manual authorisation step is required, we can implement this as part of the workflow with a Jira ticket state change (triggering the git merge to master).
 
@@ -112,7 +112,7 @@ The integration itself (merging the change into production) is logically tied to
              |            /
              |           /
              |----------o
-               (JRA-797)
+               (JRA-780)
                        
                       
                                                    o = commit
