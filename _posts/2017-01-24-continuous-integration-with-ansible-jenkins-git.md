@@ -13,7 +13,9 @@ I am using 'production' as a catch-all term for 'the code-storage-place that mus
 
 This post is not intended as a definitive guide to continuous integration workflows.   It is intended merely to bring some familiarity to the whole business of automated code release, and of where Git/Jenkins/Jira fit in.   In particular the release of Ansible code, as many people come to DevOps and automation with a steep 'dev' learning curve.
 
-What should your Source Code Management workflow look like?   What's the best repository structure, which depends on or informs  how the team share code?   Should the integration pipeline (Jenkins) be defined before or after the source code control (Git) workflow?
+* What should your Source Code Management workflow look like?   
+* What's the best repository structure, which depends on or informs how the team share code?   
+* Should the integration pipeline (Jenkins) be defined before or after the source code control (Git) workflow?
 
 To avoid paralysis in the face of multiple interrelated chicken and egg decisions, just apply some Agile thinking.   *Iterate!*
 
