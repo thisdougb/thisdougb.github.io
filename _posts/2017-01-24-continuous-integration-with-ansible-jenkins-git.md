@@ -165,4 +165,32 @@ node {
 
 The possibilities in a Jenkins pipeline are vast.   We should design the pipeline logic, like any code, so that it's clear what's going on.   There's nothing magic about it, it's really just automating what you would have (should have!) done manually.   The tasks and sub-tasks can be realised with plugins and scripts, which drop you into a shell with access to a git checkout of the feature branch.
 
+The final stage of our pipeline can automatically merge our tested feature branch back into the master branch, which integrates it into production.   Our master branch contains the commit history of the feature branch, so our code has a full audit trail.
+
+```
+$ git checkout jra-780-mysql-general-log
+$ git pull
+$ git checkout master
+$ git pull
+$ git merge --no-ff jra-780-mysql-general-log
+$ git log --name-status
+commit 04aa0899f65a39762c538c157745f09487c1493e
+Merge: 5781df4 570be18
+Author: Chris Communote <chris@example.com>
+Date:   Wed Jan 25 11:23:27 2017 +0000
+
+    Merge branch 'jra-780-mysql-general-log'
+    
+    enable mysql general query log.
+
+commit 570be18887419b93be307f72e09115d45b72d5a8
+Author: Chris Communote <chris@example.com>
+Date:   Wed Jan 25 11:22:11 2017 +0000
+
+    jra-780 enable mysql general query log
+
+M       roles/mysql/tasks/main.yml
+
+```
+
 A continuous integration pipeline is a trade off between extra effort with the details (commit messages, code formatting, etc) and no longer having to do the boring stuff (manual integration testing, audit logging, etc).   At it's heart, though, are the people contributing code, and their feeling that the trade off is in their favour.
