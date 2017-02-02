@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Explaining Long Distance To A Roadie
-permalink: /cycling/explaining-long-distance-to-a-roadie
+title: Explaining Long Distance
+permalink: /cycling/explaining-long-distance
 tags: cycling,endurance,long,distance,audax
 ---
 Explaining long distance...
