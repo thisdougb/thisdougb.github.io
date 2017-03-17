@@ -4,9 +4,20 @@ title: About
 permalink: /about/
 ---
 
-When I was a lad we had beards and sandals, we coded in C, Linux was yet to be invented, a 500MB HDD was larger than a house brick, and we played [Hack](https://en.wikipedia.org/wiki/Hack_(video_game) "Wikipedia").
-Now we sip latte while standing up and talking about the days work, we code in human languages, Linux origins are the distant past, my phone is a computer, and no-one has the attention span for Hack.
+engineering : whiteboards, ideas, discussion, proof of concept, iteration
 
-Everything has changed, yet everything remains the same.   Being curious about how things function, striving for simplicity and readability in our work, taking responsbility for the stuff we create.   These are the things that make a good DevSecOps Engineer, and were the things that made a good Unix Sysadmin.
+The engineering function is where we forge new ideas, infrastructure design, prototypes.   As Operations becomes less manual and Architecture ceases to work well within an Agile approach, Engineering is where things gets done.   
 
-I am sometimes available for hire, contact details in the footer.
+The key value is engineering for today and for the things you don't yet see.
+
+devops : Jenkins, pipelines, Ansible, python, Git, Jira, Slack, cloud
+
+Improving the speed of product development is what DevOps is all about.   With an understanding of the balance between fast feature development and stability, we engineer tools, practices, and workflows towards the continuous delivery end of the scale.
+
+Devops is the engine room, which engineering tries to improve through automation.
+
+automation : Ansible, module development, python
+
+Repeatable and predictable is a core benefit of automation.   Typos, poor password choice, and not quite getting round to it, are things that only humans suffer from.   Automating infrastructure tasks removes risk and improves security.
+
+The more work that can be automated, the more time can be spent engineering improvements in automation.
