@@ -8,7 +8,7 @@ permalink: /about/
 
 The engineering function is where we forge new ideas, infrastructure design, prototypes.   As Operations becomes less manual and Architecture ceases to work well within an Agile approach, Engineering is where advances are made.   
 
-The key value is engineering for today and for the things you don't yet see.  
+The key skill is engineering for today, and also for the things you can't yet see.  
 
 {% raw %}
 <br />
