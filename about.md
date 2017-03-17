@@ -6,7 +6,7 @@ permalink: /about/
 
 **Engineering** : whiteboards, ideas, discussion, proof of concept, iteration
 
-The engineering function is where we forge new ideas, infrastructure design, prototypes.   As Operations becomes less manual and Architecture ceases to work well within an Agile approach, Engineering is where things gets done.   
+The engineering function is where we forge new ideas, infrastructure design, prototypes.   As Operations becomes less manual and Architecture ceases to work well within an Agile approach, Engineering is where advances are made.   
 
 The key value is engineering for today and for the things you don't yet see.  
 
