@@ -10,8 +10,6 @@ The engineering function is where we forge new ideas, infrastructure design, pro
 
 The key value is engineering for today and for the things you don't yet see.  
 
-{% include <br /><br /> %}
-
 DevOps : Jenkins, pipelines, Ansible, python, Git, Jira, Slack, cloud
 
 Improving the speed of product development is what DevOps is all about.   With an understanding of the balance between fast feature development and stability, we engineer tools, practices, and workflows towards the continuous delivery end of the scale.
