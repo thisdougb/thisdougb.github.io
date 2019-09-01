@@ -2,12 +2,12 @@
 layout: post
 title: How To Choose DevOps Tooling
 permalink: /ansible/how-to-choose-devops-tooling
-tags: ansible,role,roles,playbook,play,devops,engineering
+tags: ansible,puppet,terraform,cto,devops,engineering
 ---
 
 (State the surface problem, terraform v ansible)
 
-(Identify the real problem, not discipline to choose tools on merit)
+(Identify the real problem, no discipline to choose tools on merit)
 
 (Why this matters)
 
@@ -25,10 +25,11 @@ In this post I will describe this method using automation tooling as the topic.
 **(Identify the real problem, not discipline to choose tools on merit)**
 
 I asked some artist friends of mine to recommend a sketch pad for ink drawings.
-Immediately they fired a volley of questions at me, which resulted in the user story:
+Immediately they fired a volley of questions at me about where, when and how I'd be sketching.
+We summarised my goal in the user story:
 
 ```
-I would like to sketch the people and places I see while travelling to DevOps clients, 
+I would like to sketch the people and places I see while travelling to DevOps clients,
 as I often have short amounts of free time sitting in cafes, or train stations, etc.
 ```
 What struck me was how familiar their line of questioning was, to software development.
@@ -65,11 +66,10 @@ Any combination in this set meets my user requirements, so I am now free to pick
 
 The real lesson from the art world is that tools are just tools.
 To evangelise about a pen branded X, is to miss the point completely.
-Likewise, to dismiss an individual tool, be it a pen or a piece of software, on subjective grounds is bad practice.
+Likewise, to dismiss an individual tool, be it a pen or a piece of software, on subjective grounds is not only bad practice but also limiting your potential.
 
-```
-Technology ("science of craft", from Greek τέχνη, techne, "art, skill, cunning of hand"; and -λογία, -logia[2]) is the collection of techniques, skills, methods, and processes used in the production of goods or services
-```
+>Technology ("science of craft", from Greek τέχνη, techne, "art, skill, cunning of hand"; and -λογία, -logia[2]) is the collection of techniques, skills, methods, and processes used in the production of goods or services
+
 
 When engineering in a DevOps environment, the broader _and_ deeper your toolbox, the better placed you are to pick the right tool for the job.
 So let's take this approach to automation tooling.
@@ -81,20 +81,21 @@ When thinking about automation I split tasks into two categories, infrastructure
 Infrastructure tasks are creating and destroying things, ALBs, instances, VPCs, etc.
 Operational tasks are everything else.
 
-I ask the client to fill out the _examples_ section of this table (typically these come from runbooks):
+With the client we fill out the _examples_ section of this table (typically these come from their run-books):
 
 Tasks | Infrastructure | Operations
 --- | --- | ---
-Examples | Create VPC<br>Create subnets<br>Destroy RDS instance | Manage ephemeral testing env's (create, query, destroy)<br>Modify ECS clusters<br>Database restore testing<br>Flip database cluster nodes for patching<br>Update ECS task definitions<br>Rotate AWS IAM deployment api keys<br>etc.
- Character | static | logical/dynamic
-Method | push | push/pull 
-Tool type | declarative/imperative | imperative
+Examples | Create VPC<br>Create subnets<br>Destroy RDS instance<br>Create/destroy ephemeral testing env's | Manage ephemeral testing env's (query, extend)<br>Modify ECS clusters<br>Database restore testing<br>Flip database cluster nodes for patching<br>Update ECS task definitions<br>Rotate AWS IAM deployment api keys
 
-Clients at this stage find it quite easy to reel off a large number of tasks in the operational column.
-Operational tasks are the ones where you can increase or decrease friction for everyone working in your environment.
+Companies where developers rule the roost, tend to only be able to list infrastructure tasks.
+This is usually because operational tasks are ignored as they are not essential to the developer workflow.
+In these companies the initial brief mentions either Terraform or Cloud Formation.
+The developers have chosen the tooling, got as far as they could, and now need help.
+
+Clients find it quite easy to reel off a large number of tasks in the operational column.
+Operational tasks are the ones where you can decrease friction for everyone working in your environment.
 If it takes three hours to manually test a database restore, that's an awful lot of friction for individuals in your team.
 
 On the infrastructure side, I have visited companies who place a higher priority on IaC to recreate their production environment.
 They will, of course, almost certainly never run that code to recreate production VPCs.
 But because that was their focus, they choose an automation tool which favoured that type.
-
