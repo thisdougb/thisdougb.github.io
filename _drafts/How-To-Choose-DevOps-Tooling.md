@@ -15,19 +15,18 @@ tags: ansible,puppet,terraform,cto,devops,engineering
 
 **(State the surface problem, terraform v ansible)**
 
-Are technology people inherently irrational when faced with making choices?
-I have pondered this for many years, with increasing frequency as the lifetime of software tools has rapidly decreased.
-There are so many discussions about bringing the Next Big Thing into the DevOps toolset.
-Gone are the days when everything could be done with Bash and Perl.
+For many years I have pondered whether technology people inherently irrational when faced with making choices.
+I've done this with increasing frequency, as the lifetime of software tools has rapidly decreased in the Cloud and DevOps era.
+We seem to be constantly in a state of bringing the Next Big Thing into the DevOps toolset.
+Gone are the days when the choice was Bash or Bash, and mavericks excluded the generalists by using Perl.
 
 But what is it that makes some of us so vehemently for and against particular software tools?
 More pressing, how can we become more effective at choosing software tools in a DevOps environment?
-I am witnessing too many Ansible v Terraform v Puppet arguments, that I am compelled to define a method to guide the choice.
-In this post I will describe the tool selection method I use, borrowing an example from the art world.
-Then I will walkthrough a more practical DevOps example, to choose automation tooling.
+I witness too many Ansible v Terraform v Puppet arguments these days, that I am compelled to offer a method to guide choice.
+In this post I will describe the tool selection method I use, with an illustration from the art world.
+Then I will walkthrough a more practical DevOps example, choosing automation tools.
 
-
-**(Identify the real problem, not discipline to choose tools on merit)**
+**(Identify the real problem, no discipline to choose tools on merit)**
 
 I asked some artist friends of mine to recommend a sketch pad for ink drawings.
 Immediately they fired a volley of questions at me about where, when and how I'd be sketching.
@@ -39,6 +38,8 @@ I would like to sketch the people and places I see while travelling to DevOps cl
 as I often have short amounts of free time sitting in cafes, or train stations, etc.
 ```
 
+This is pretty clear, though some experience is required to pick up the contextual assumptions.
+A _short amount of time_ implies a fast drying medium (some ink types), and _travel_ rules out things like graphite pencils.
 They then outlined the main requirements and constraints, distilling them down till everyone was in agreement:
 
 ```
@@ -50,6 +51,7 @@ Sketchbook paper should be of sufficient weight to hold the ink.
 ```
 
 We were quite far into the conversation and yet no-one had even mentioned a brand name.
+The discussion remained in the realm of practical usage, the operational side of things if you like.
 My experience of technology discussions is that from the outset, you already know what everyone is advocating (Terraform or Ansible, Ruby or Python, etc).
 
 We (technology and DevOps people) seem to start with the answer, and work backwards to justify it.
