@@ -21,9 +21,11 @@ There are so many discussions about bringing the Next Big Thing into the DevOps 
 Gone are the days when everything could be done with Bash and Perl.
 
 But what is it that makes some of us so vehemently for and against particular software tools?
-More pressing, how can we become more effective at choosing software tools?
-I am witnessing too many Ansible v Terraform v Puppet arguments, that I am pushed into defining a method to guide the choice.
-In this post I will describe this method using automation tooling as the topic.
+More pressing, how can we become more effective at choosing software tools in a DevOps environment?
+I am witnessing too many Ansible v Terraform v Puppet arguments, that I am compelled to define a method to guide the choice.
+In this post I will describe the tool selection method I use, borrowing an example from the art world.
+Then I will walkthrough a more practical DevOps example, to choose automation tooling.
+
 
 **(Identify the real problem, not discipline to choose tools on merit)**
 
