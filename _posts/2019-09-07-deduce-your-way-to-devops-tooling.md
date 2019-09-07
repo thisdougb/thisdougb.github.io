@@ -78,9 +78,9 @@ For some we get started by listing their existing run-books.
 We always involve the people who are actually doing the work, they are the ones who really know what's going on.
 I then tend to add in all the tasks they didn't realise they should do.
 
-Infrastructure Tasks | Operations Tasks
---- | ---
-Create VPC<br>Create subnet<br>Destroy RDS instance<br>Create/destroy ephemeral testing env | Manage ephemeral testing env's (query, extend)<br>Modify ECS clusters<br>Database restore testing<br>Flip database cluster nodes for patching<br>Update ECS task definitions<br>Rotate AWS IAM deployment api keys<br>Enable sales-reps to spin up demo env's
+| Infrastructure Tasks | Operations Tasks |
+| --- | --- |
+| Create VPC<br>Create subnet<br>Destroy RDS instance<br>Create/destroy ephemeral testing env | Manage ephemeral testing env's (query, extend)<br>Modify ECS clusters<br>Database restore testing<br>Flip database cluster nodes for patching<br>Update ECS task definitions<br>Rotate AWS IAM deployment api keys<br>Enable sales-reps to spin up demo env's |
 
 The key understanding here is that infrastructure tasks suit declarative tooling (Terraform, CloudFormation, etc), and operational tasks suit imperative tooling (Puppet, Ansible, etc).
 
@@ -144,11 +144,11 @@ As someone once said, "Make things as simple as possible, but no simpler."
 
 Here we define the delivery method as a choice of reason:
 
- | Infrastructure Tasks | Operational Tasks
---- | --- | ---
-Task Type Weighting | 2.4% | 95.7%
-Suitable paradigm | declarative, imperative | imperative
-Delivery Method | push | push, sometimes pull
+| | Infrastructure Tasks | Operational Tasks |
+| --- | --- | --- |
+| Task Type Weighting | 2.4% | 95.7% |
+| Suitable paradigm | declarative, imperative | imperative |
+| Delivery Method | push | push, sometimes pull |
 
 The push delivery method wins in most cases for the combo of infrastructure and operational tasks.
 When agents pull changes, you must always add additional infrastructure to monitor and check the agents.
@@ -164,14 +164,14 @@ It is also easy to know when you're requirements have changed.
 Let's list out the current crop of CCA-like tools, and cross off any not meeting requirements.
 Our goal (perhaps as CTO or lead) is to arrive at a rational tooling choice, which results in a low-friction DevOps environment.
 
-Tool | Released By | Paradigm | Delivery | Language
---- | --- | --- | --- | ---
-Ansible | RedHat | imperative | push | Python
-Chef | Chef | declarative, imperative | push, pull | Ruby
-~~CloudFormation~~ | ~~AWS~~ | ~~declarative~~ | ~~push~~ | -
-~~Puppet~~ | ~~Puppet~~ | ~~declarative~~ | ~~pull~~ | ~~Ruby~~
-SaltStack | SaltStack | declarative, imperative | push, pull | Python
-~~Terraform~~ | ~~HashiCorp~~ | ~~declarative~~ | ~~push~~ | ~~Go~~
+| Tool | Released By | Paradigm | Delivery | Language |
+| --- | --- | --- | --- | --- |
+| Ansible | RedHat | imperative | push | Python |
+| Chef | Chef | declarative, imperative | push, pull | Ruby |
+| ~~CloudFormation~~ | ~~AWS~~ | ~~declarative~~ | ~~push~~ | - |
+| ~~Puppet~~ | ~~Puppet~~ | ~~declarative~~ | ~~pull~~ | ~~Ruby~~ |
+| SaltStack | SaltStack | declarative, imperative | push, pull | Python |
+| ~~Terraform~~ | ~~HashiCorp~~ | ~~declarative~~ | ~~push~~ | ~~Go~~ |
 
 At this point we have some remaining options to choose from, all of which meet our fictional company requirements.
 Refining the choice from here could be down to the skills available in the team or job market, tool maturity and community support.
