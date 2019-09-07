@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Deduce Your Way To DevOps Tooling
-permalink: /ansible/how-to-choose-devops-tooling
-tags: ansible,puppet,terraform,cto,devops,engineering,deduction,operations,imperative,declarative
+permalink: /ansible/deduce-your-way-to-devops-tooling
+tags: ansible,puppet,terraform,chef,cto,devops,engineering,deduction,operations,imperative,declarative,automation,linux,aws
 ---
 ### Deduce Your Way To DevOps Tooling
 Are technology people inherently irrational when faced with making choices?
