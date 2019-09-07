@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deduce Your Way To DevOps Tooling
-permalink: /ansible/2019-09-07-deduce-your-way-to-devops-tooling
+permalink: /devops/2019-09-07-deduce-your-way-to-devops-tooling
 tags: ansible,puppet,terraform,chef,cto,devops,engineering,deduction,operations,imperative,declarative,automation,linux,aws
 ---
 ### Deduce Your Way To DevOps Tooling
