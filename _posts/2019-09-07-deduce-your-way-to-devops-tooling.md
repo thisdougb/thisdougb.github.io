@@ -22,20 +22,17 @@ Immediately they fired a volley of questions at me about where, when and how I'd
 What struck me was how familiar their line of questioning was, to software development.
 We summarised my goal in the user story:
 
-```
-I would like to sketch the people and places I see while travelling to DevOps clients,
+>I would like to sketch the people and places I see while travelling to DevOps clients,
 as I often have short amounts of free time sitting in cafes, or train stations, etc.
-```
 
 They then outlined the main requirements and constraints, distilling them down till everyone was in agreement:
 
-```
-Sketchbooks for travelling must be low-hassle and robust (hardback, no greater than A5 size).
-Type of pen should be available to buy in most medium sized towns.
-Type of pen ink must be fast drying.
-Pens must not leak ink.
-Sketchbook paper should be of sufficient weight to hold the ink.
-```
+* Sketchbooks for travelling must be low-hassle and robust (hardback, no greater than A5 size).
+* Type of pen should be available to buy in most medium sized towns.
+* Type of pen ink must be fast drying.
+* Pens must not leak ink.
+* Sketchbook paper should be of sufficient weight to hold the ink.
+
 
 Quite far into the conversation I realised no-one had even mentioned a brand name.
 My experience of technology discussions is that from the outset, you already know what everyone is advocating (Terraform or Ansible, Ruby or Python, etc).
@@ -48,12 +45,11 @@ We, myself included, are often guilty of wilfully neglecting the user story curr
 My artist friends closed off by removing from the set of possibilities any products that didn't meet the requirements.
 They presented me with this:
 
-```
-Sketchbooks to consider are A and B, pens are X, Y, and Z.
-The paper in sketchbook A works best with pen Y.
-The paper in sketchbook B works bext with pen X.
-Sketchbook B and pen Z is the cheapest combination.
-```
+* Sketchbooks to consider are A and B, pens are X, Y, and Z.
+* The paper in sketchbook A works best with pen Y.
+* The paper in sketchbook B works bext with pen X.
+* Sketchbook B and pen Z is the cheapest combination.
+
 Only at this point did any of them offer which of A, B, X, Y, and Z they actually prefered.
 Only at this point did subjectivity come into it.
 Any combination in this set meets my user requirements, so I am now free to pick and reject what I like on a subjective basis.
