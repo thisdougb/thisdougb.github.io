@@ -138,7 +138,10 @@ When creating things (EC2 instances, load balancer, etc) pushing change is the o
 So declarative tooling must use the push method of delivery, and this implies it must run from a control node (laptop, instance).
 Nice and easy.
 
-Operational tasks are also fairly easy to assign a delivery method, with one exception.
+Operational tasks are also fairly easy to assign a delivery method..
+If the list of operational tasks include creating any infrastructure, then the push method is the reasoned choice.
+
+There is an exception to this.
 For active resources (instances, etc) an agent process can pull configuration changes.
 The conundrum here is that you initially _push_ this agent onto the resource, meaning you already have a push based automation tool.
 
@@ -158,4 +161,33 @@ Here we define the delivery method as a choice of reason:
 --- | --- | ---
 Task Type Weighting | 2.4% | 95.7%
 Suitable paradigm | declarative, imperative | imperative
-Delivery Method | push | push, pull
+Delivery Method | push | push, sometimes pull
+
+#### Decision Time
+In my example of a web company maturing to a more operationally focused state, we have arrived at our requirements by deduction.
+Most recurring tasks will be operational, which suits the imperative paradigm, and we are required to push changes because we are a lean DevOps team and also create infrastructure.
+
+Your requirements may come out differently, but the process of deduction from the initial list of tasks should be the same.
+The benefit of a systematic process is that it is transparent and easily documented.
+It is also easy to know when you're requirements have changed.
+
+Let's list out the current crop of CCA-like tools, and cross off any not meeting requirements.
+Our goal (perhaps as CTO or lead) is to arrive at a rational tooling choice, which results in a low-friction DevOps environment.
+
+Tool | Released By | Paradigm | Delivery | Language
+--- | --- | --- | --- | ---
+Ansible | RedHat | imperative | push | Python
+~~Chef~~ | ~~Chef~~ | ~~declarative, imperative~~ | ~~pull~~ | ~~Ruby~~
+~~CloudFormation~~ | ~~AWS~~ | ~~declarative~~ | ~~push~~ | -
+~~Puppet~~ | ~~Puppet~~ | ~~declarative~~ | ~~pull~~ | ~~Ruby~~
+SaltStack | SaltStack | declarative, imperative | push, pull | Python
+~~Terraform~~ | ~~HashiCorp~~ | ~~declarative~~ | ~~push~~ | ~~Go~~
+
+DevOps tends to be an operations-heavy job, and we focus on automating process.
+We focus on process because this is where the largest gains of automation can be made, from time savings to reliability.
+
+Objective tooling choice is important.
+I don't believe technology people inherently make irrational choices.
+I think we're just people, and people tend to be poor at rational decision making.
+We tend to go with what we know, or bias towards feelings we're conscious of (StackOverflow search results).
+It is possible to mitigate against this, using a systematic approach.
