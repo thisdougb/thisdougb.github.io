@@ -99,14 +99,14 @@ Our goal with DevOps is all about reducing friction around the tasks we do.
 We can summarise the task list and give a sense of the person-hours required.
 The following numbers are based on a fictitious 20-dev web company, using Agile.
 
- | Infrastructure Tasks | Operational Tasks
---- | --- | ---
-Task Count | 4 | 7
-Manual Task Hours | 6 | 8
-Weekly Run Hours | 1 | 40
-Monthly Run Hours | 4 | 160
-Task Type Weighting | 2.4% | 95.7%
-Suitable paradigm | declarative, imperative | imperative
+| | Infrastructure Tasks | Operational Tasks |
+| --- | --- | --- |
+| Task Count | 4 | 7 |
+| Manual Task Hours | 6 | 8 |
+| Weekly Run Hours | 1 | 40 |
+| Monthly Run Hours | 4 | 160 |
+| Task Type Weighting | 2.4% | 95.7% |
+| Suitable paradigm | declarative, imperative | imperative |
 
 _(imperative is suitable for infrastructure tasks simply because in a logical sense imperative programming can define any order, and therefore replicate declarative programming)_
 
