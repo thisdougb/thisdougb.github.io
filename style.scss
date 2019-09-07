@@ -80,6 +80,7 @@ a {
 ul, ol {
   margin: 15px 0;
   padding-left: 30px;
+  font-size: 90%;
 }
 
 ul {
@@ -289,7 +290,7 @@ nav {
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
     color: $gray;
-    font-size: 22px;
+    //font-size: 22px;
     font-style: italic;
   }
 
