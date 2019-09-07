@@ -67,7 +67,7 @@ Likewise, to dismiss an individual tool, be it a pen or a piece of software, on 
 When engineering in a DevOps environment, the broader _and_ deeper your toolbox, the better placed you are to pick the right tool for the job.
 So let's take this approach to automation tooling.
 
-#### List Your Needs
+#### List Workload Reality
 When I begin working with a client the first job is to figure out what they really need to achieve, their DevOps user story.
 Thinking about automation I split tasks into two categories, infrastructure tasks and operational tasks.
 Infrastructure tasks are creating and destroying things, ALBs, instances, VPCs, etc.
@@ -93,7 +93,7 @@ Perhaps there is an operational task to test that a database backup can be resto
 This would be done with an imperative tool, through an ordered series of state changes.
 If you imagine a 'restore testing' run-book, you have to complete each step to get to the end state.
 
-#### Deduce Tooling Paradigm
+#### Deduce The Tooling Paradigm
 Tool choice should be guided by reasoning, and we take the first choice here.
 Our goal with DevOps is all about reducing friction around the tasks we do.
 We can summarise the task list and give a sense of the person-hours required.
@@ -150,6 +150,9 @@ Task Type Weighting | 2.4% | 95.7%
 Suitable paradigm | declarative, imperative | imperative
 Delivery Method | push | push, sometimes pull
 
+The push delivery method wins in most cases for the combo of infrastructure and operational tasks.
+When agents pull changes, you must always add additional infrastructure to monitor and check the agents.
+
 #### Decision Time
 In my example of a web company maturing to a more operationally focused state, we have refined our options using  deduction:
 > _Most recurring tasks will be operational, which suits the imperative paradigm, and we are required to push changes because some of those tasks also create infrastructure._
@@ -170,6 +173,13 @@ Chef | Chef | declarative, imperative | push, pull | Ruby
 SaltStack | SaltStack | declarative, imperative | push, pull | Python
 ~~Terraform~~ | ~~HashiCorp~~ | ~~declarative~~ | ~~push~~ | ~~Go~~
 
+At this point we have some remaining options to choose from, all of which meet our fictional company requirements.
+Refining the choice from here could be down to the skills available in the team or job market, tool maturity and community support.
+
+The above table of options would look a little different if we were automating infrastructure tasks.
+We'd cross off Puppet as an option, but all others would be on the table.
+
+#### One Deductive Process, Not One Tool
 DevOps tends to be an operations-heavy job, and we focus on automating _processes_.
 We focus on process because this is where the largest gains of automation can be, from time savings to increasing reliability.
 
@@ -177,4 +187,6 @@ An objective method for choosing DevOps tooling is important.
 I don't believe technology people inherently make irrational choices.
 I think we're just people, and people tend to be poor at rational decision making.
 We tend to go with what we know, or are biased by more recent and frequent events we're conscious of (StackOverflow search results).
-It is possible to mitigate against this, using a systematic approach.
+
+Using a systematic approach to tool choice should put us all in a better place.
+And if DevOps is about anything it's about reducing the manual effort at the keyboard and increasing time spent engineering simplicity.
