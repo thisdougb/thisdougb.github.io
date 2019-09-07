@@ -1,8 +1,8 @@
 ---
 layout: post
-title: How To Choose DevOps Tooling
+title: Deduce You Way To DevOps Tooling
 permalink: /ansible/how-to-choose-devops-tooling
-tags: ansible,puppet,terraform,cto,devops,engineering
+tags: ansible,puppet,terraform,cto,devops,engineering,deduction,operations,imperative,declarative
 ---
 
 (State the surface problem, terraform v ansible)
@@ -133,8 +133,28 @@ At this two or three year mark, a typical startup has built a revenue stream tha
 It is often a great challenge to a company to perceive the change in dynamic to a more operationally focused set of needs.
 
 #### Push Me Pull Me
+The next deduction is what delivery method makes most sense.
+When creating things (EC2 instances, load balancer, etc) pushing change is the only way.
+So declarative tooling must use the push method of delivery, and this implies it must run from a control node (laptop, instance).
+Nice and easy.
 
-| Infrastructure Tasks | Operations Tasks
+Operational tasks are also fairly easy to assign a delivery method, with one exception.
+For active resources (instances, etc) an agent process can pull configuration changes.
+The conundrum here is that you initially _push_ this agent onto the resource, meaning you already have a push based automation tool.
+
+For CTOs/leads the question here is about organisational structure.
+My initial probing when arriving in a company using multiple automation tools is:
+
+* Are infrastructure and configuration management distinct teams with little or no shared code?
+* Is there a compelling reason to run two, potentially conflicting, automation tools?
+
+Fewer technologies in-play makes for a leaner more efficient DevOps environment.
+However, a warning sign that too few tools are being used is the number of hacks and workarounds being used to overcome unsuitable tooling.
+As someone once said, "Make things as simple as possible, but no simpler."
+
+Here we define the delivery method as a choice of reason:
+
+ | Infrastructure Tasks | Operations Tasks
 --- | --- | ---
 Task Type Weighting | 2.4% | 95.7%
 Suitable paradigm | declarative, imperative | imperative
