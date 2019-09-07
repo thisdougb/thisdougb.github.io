@@ -15,18 +15,17 @@ tags: ansible,puppet,terraform,cto,devops,engineering
 
 **(State the surface problem, terraform v ansible)**
 
-For many years I have pondered whether technology people inherently irrational when faced with making choices.
-I've done this with increasing frequency, as the lifetime of software tools has rapidly decreased in the Cloud and DevOps era.
-We seem to be constantly in a state of bringing the Next Big Thing into the DevOps toolset.
-Gone are the days when the choice was Bash or Bash, and mavericks excluded the generalists by using Perl.
+Are technology people inherently irrational when faced with making choices?
+I have pondered this for many years, with increasing frequency as the lifetime of software tools has rapidly decreased.
+There are so many discussions about bringing the Next Big Thing into the DevOps toolset.
+Gone are the days when everything could be done with Bash and Perl.
 
 But what is it that makes some of us so vehemently for and against particular software tools?
-More pressing, how can we become more effective at choosing software tools in a DevOps environment?
-I witness too many Ansible v Terraform v Puppet arguments these days, that I am compelled to offer a method to guide choice.
-In this post I will describe the tool selection method I use, with an illustration from the art world.
-Then I will walkthrough a more practical DevOps example, choosing automation tools.
+More pressing, how can we become more effective at choosing software tools?
+I am witnessing too many Ansible v Terraform v Puppet arguments, that I am pushed into defining a method to guide the choice.
+In this post I will describe this method using automation tooling as the topic.
 
-**(Identify the real problem, no discipline to choose tools on merit)**
+**(Identify the real problem, not discipline to choose tools on merit)**
 
 I asked some artist friends of mine to recommend a sketch pad for ink drawings.
 Immediately they fired a volley of questions at me about where, when and how I'd be sketching.
@@ -38,8 +37,6 @@ I would like to sketch the people and places I see while travelling to DevOps cl
 as I often have short amounts of free time sitting in cafes, or train stations, etc.
 ```
 
-This is pretty clear, though some experience is required to pick up the contextual assumptions.
-A _short amount of time_ implies a fast drying medium (some ink types), and _travel_ rules out things like graphite pencils.
 They then outlined the main requirements and constraints, distilling them down till everyone was in agreement:
 
 ```
@@ -51,7 +48,6 @@ Sketchbook paper should be of sufficient weight to hold the ink.
 ```
 
 We were quite far into the conversation and yet no-one had even mentioned a brand name.
-The discussion remained in the realm of practical usage, the operational side of things if you like.
 My experience of technology discussions is that from the outset, you already know what everyone is advocating (Terraform or Ansible, Ruby or Python, etc).
 
 We (technology and DevOps people) seem to start with the answer, and work backwards to justify it.
@@ -84,28 +80,62 @@ So let's take this approach to automation tooling.
 
 **(offer the solution)**
 
+#### List Your Needs
 When I start working with a client the first job is to figure out what they really need to achieve, their DevOps user story.
 When thinking about automation I split tasks into two categories, infrastructure tasks and operational tasks.
 Infrastructure tasks are creating and destroying things, ALBs, instances, VPCs, etc.
 Operational tasks are everything else.
 
-With the client we fill out the _examples_ section of this table with all the tasks they currently do, or would like to do. 
+With the client we fill out this table with all the tasks they currently do, or would like to do.
 For some we get started by listing their existing run-books.
+We always include people in the conversation who are actually doing the work, they are the ones who really know what's going on.
+I then tend to add in all the tasks they didn't realise they should do.
 
-Tasks | Infrastructure | Operations
+Infrastructure Tasks | Operations Tasks
+--- | ---
+Create VPC<br>Create subnet<br>Destroy RDS instance<br>Create/destroy ephemeral testing env | Manage ephemeral testing env's (query, extend)<br>Modify ECS clusters<br>Database restore testing<br>Flip database cluster nodes for patching<br>Update ECS task definitions<br>Rotate AWS IAM deployment api keys<br>enable sales to spin up demo env's
+
+The key understanding here is that infrastructure tasks suit declarative tooling (Terraform, Cloud Formation, etc), and operational tasks suit imperative tooling (Puppet, Ansible, etc).
+
+With infrastructure tasks you don't care _how_ things are done, just that the resulting state is correct.
+If you want to destroy a test environment in AWS, you only care that no infrastructure is left standing.
+It doesn't matter if one or other EC2 instance is destroyed first.
+
+On the other side, operational tasks are those where you generally do care about how things are done.
+Perhaps there is an operational task to test a database backup can be restored.
+This would be done with an imperative tool, through an ordered series of state changes.
+If you imagine a 'restore testing' run-book, you have to complete each step to get to the end state.
+
+#### Deduce Tooling Paradigm
+The final tool choice should be guided by reasoning, and we take the first choice here.
+Our goal with DevOps is all about reducing friction around the tasks we do.
+Based on the above tasks table we can summarise and try and reasonably-guess some quantities.
+The following numbers are based on a fictitious 20-dev web company, using Agile.
+
+ | Infrastructure Tasks | Operations Tasks
 --- | --- | ---
-Examples | Create VPC<br>Create subnets<br>Destroy RDS instance<br>Create/destroy ephemeral testing env's | Manage ephemeral testing env's (query, extend)<br>Modify ECS clusters<br>Database restore testing<br>Flip database cluster nodes for patching<br>Update ECS task definitions<br>Rotate AWS IAM deployment api keys<br>enable sales to spin up demo env's
+Task Count | 4 | 7
+Manual Task Hours | 6 | 8
+Weekly Run Hours | 1 | 40
+Monthly Run Hours | 4 | 160
+Task Type Weighting | 2.4% | 95.7%
+Suitable paradigm | declarative, imperative | imperative
 
-Companies where developers rule the roost, tend to focus on infrastructure tasks.
-This is usually because operational tasks are not essential to the developer workflow.
-In these companies the initial brief mentions either Terraform or Cloud Formation.
-The developers have chosen the tooling, got as far as they could, and now need help with the trickier operational tasks.
+_(imperative is suitable for infrastructure tasks simply because in a logical sense imperative programming can define any order, and therefore can build infrastructure)_
 
-Once you get going it's quite easy to reel off a large number of operational tasks.
-These are the ones, when automation, that should decrease friction for everyone working in your environment.
-If it takes three hours to manually test a database restore, that's an awful lot of friction for individuals in your team.
-The thing to bear in mind here is that operational tasks may involve people outside of your scrum team.
+While there are many ways to slice it, any CTO or team lead will be concerned by operational hours spent on repetitive tasks.
+The above weighting example (heavily operational) is, by definition, most DevOps environments.
 
-On the infrastructure side, I have visited companies who place a higher priority on IaC to recreate their production environment.
-They will, of course, almost certainly never run that code to recreate production VPCs.
-But because that was their focus, they choose an automation tool which favoured that type.
+An interesting side note here.
+Many web startups call for DevOps engineers when they get to about year two or three.
+Having got that far with developers being able to stand up infrastructure and CI/CD pipelines.
+At this two or three year mark, a typical startup has built a revenue stream that must be protected (with app reliability, scalable performance, etc).
+It is often a great challenge to a company to perceive the change in dynamic to a more operationally focused set of needs.
+
+#### Push Me Pull Me
+
+| Infrastructure Tasks | Operations Tasks
+--- | --- | ---
+Task Type Weighting | 2.4% | 95.7%
+Suitable paradigm | declarative, imperative | imperative
+Delivery Method | push | push, pull
