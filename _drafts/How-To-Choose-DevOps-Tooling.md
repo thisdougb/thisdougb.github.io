@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Deduce You Way To DevOps Tooling
+title: Deduce Your Way To DevOps Tooling
 permalink: /ansible/how-to-choose-devops-tooling
 tags: ansible,puppet,terraform,cto,devops,engineering,deduction,operations,imperative,declarative
 ---
+### Deduce Your Way To DevOps Tooling
 Are technology people inherently irrational when faced with making choices?
 
 I have pondered this for many years, with increasing frequency as the lifetime of infrastructure tooling has rapidly decreased.
@@ -12,7 +13,7 @@ Gone are the days when everything could be done with OS packaged Bash and Perl.
 
 Within this state of flux, what is it that makes some of us so vehemently for and against particular software tools that are seemingly disposable?
 More pressing, how can CTOs and platform leads become more effective at driving tooling choices?
-I am witnessing too many subjective Ansible v Terraform v Puppet arguments, that I am pushed to define a method to guide the choice.
+I am witnessing too many subjective Ansible v Terraform v Puppet arguments, that I am pushed to define a method to guide this decision making process.
 In this post I will describe this method using art and automation tooling.
 
 #### Life Imitates Art
@@ -39,7 +40,7 @@ Sketchbook paper should be of sufficient weight to hold the ink.
 Quite far into the conversation I realised no-one had even mentioned a brand name.
 My experience of technology discussions is that from the outset, you already know what everyone is advocating (Terraform or Ansible, Ruby or Python, etc).
 
-Technology and DevOps people seem to start with the answer, and work backwards to justify it.
+Technology people often seem to start with the answer, and work backwards to justify it.
 This, I feel, is what DevOps tooling discussions are really about.
 Trying to justify our favourite tool is best in every case we come across, often simply to validate to ourselves we follow the right tribe.
 We, myself included, are often guilty of wilfully neglecting the user story currently in play.
@@ -74,12 +75,12 @@ Operational tasks are everything else.
 
 I ask the client to fill out this table with all the tasks they currently do, or would like to do.
 For some we get started by listing their existing run-books.
-We always include people in the conversation who are actually doing the work, they are the ones who really know what's going on.
+We always involve the people who are actually doing the work, they are the ones who really know what's going on.
 I then tend to add in all the tasks they didn't realise they should do.
 
 Infrastructure Tasks | Operations Tasks
 --- | ---
-Create VPC<br>Create subnet<br>Destroy RDS instance<br>Create/destroy ephemeral testing env | Manage ephemeral testing env's (query, extend)<br>Modify ECS clusters<br>Database restore testing<br>Flip database cluster nodes for patching<br>Update ECS task definitions<br>Rotate AWS IAM deployment api keys<br>enable sales to spin up demo env's
+Create VPC<br>Create subnet<br>Destroy RDS instance<br>Create/destroy ephemeral testing env | Manage ephemeral testing env's (query, extend)<br>Modify ECS clusters<br>Database restore testing<br>Flip database cluster nodes for patching<br>Update ECS task definitions<br>Rotate AWS IAM deployment api keys<br>Enable sales-reps to spin up demo env's
 
 The key understanding here is that infrastructure tasks suit declarative tooling (Terraform, CloudFormation, etc), and operational tasks suit imperative tooling (Puppet, Ansible, etc).
 
@@ -150,8 +151,8 @@ Suitable paradigm | declarative, imperative | imperative
 Delivery Method | push | push, sometimes pull
 
 #### Decision Time
-In my example of a web company maturing to a more operationally focused state, we have arrived at our requirements by deduction.
-Most recurring tasks will be operational, which suits the imperative paradigm, and we are required to push changes because some of those tasks also create infrastructure.
+In my example of a web company maturing to a more operationally focused state, we have refined our options using  deduction:
+> _Most recurring tasks will be operational, which suits the imperative paradigm, and we are required to push changes because some of those tasks also create infrastructure._
 
 Requirements for other companies may come out differently, but the process of deduction from the initial list of tasks should be the same.
 The benefit of a systematic process is that it is transparent and easily documented.
@@ -170,10 +171,10 @@ SaltStack | SaltStack | declarative, imperative | push, pull | Python
 ~~Terraform~~ | ~~HashiCorp~~ | ~~declarative~~ | ~~push~~ | ~~Go~~
 
 DevOps tends to be an operations-heavy job, and we focus on automating _processes_.
-We focus on process because this is where the largest gains of automation can be, from time savings to reliability.
+We focus on process because this is where the largest gains of automation can be, from time savings to increasing reliability.
 
 An objective method for choosing DevOps tooling is important.
 I don't believe technology people inherently make irrational choices.
 I think we're just people, and people tend to be poor at rational decision making.
-We tend to go with what we know, or bias towards feelings we're conscious of (StackOverflow search results).
+We tend to go with what we know, or are biased by more recent and frequent events we're conscious of (StackOverflow search results).
 It is possible to mitigate against this, using a systematic approach.
