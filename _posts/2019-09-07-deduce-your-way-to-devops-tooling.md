@@ -88,11 +88,11 @@ The key understanding here is that infrastructure tasks suit declarative tooling
 
 > _Declarative approach_: You ask a colleague to go out and fetch your lunch, they come back with a coffee and sandwich. The coffee is lukewarm, your colleague says the coffee started going cold while they were queuing for the sandwich.
 
-> _Imperative approach_: You go out for your own lunch. You buy the sandwich first and then the coffee, because you know this ensures the coffee will still be hot when you get back to your desk. You deliberately ordered the path to the end state.
-
 With infrastructure tasks you don't care _how_ things are done, just that the resulting state is correct.
 If you want to destroy a test environment in AWS, you only care that no infrastructure is left standing.
 It doesn't matter if one or other EC2 instance is destroyed first.
+
+> _Imperative approach_: You go out for your own lunch. You buy the sandwich first and then the coffee, because you know this ensures the coffee will still be hot when you get back to your desk. You deliberately ordered the path to the end state.
 
 On the other side, operational tasks are those where you generally do care about how things are done.
 Perhaps there is an operational task to test that a database backup can be restored.
