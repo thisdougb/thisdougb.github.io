@@ -181,7 +181,7 @@ Refining the choice from here could be down to the skills available in the team 
 
 It is a straightforward choice to go with Ansible in this case.
 We gain tool stability and maturity, plenty of community support, and we have a ready supply of Python capable engineers.
-Ansible supports all the cloud infrastructure building we require.
+Ansible suits operational tasks, and supports all the cloud infrastructure building we require.
 
 Requirements for other companies may come out differently, but the process of deduction from the initial list of tasks should be the same.
 The benefit of a systematic process is that it is transparent and easily documented.
