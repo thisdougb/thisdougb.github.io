@@ -164,10 +164,6 @@ When agents pull changes, you must always add additional infrastructure to monit
 In my example of a web company maturing to a more operationally focused state, we have refined our options using  deduction:
 > _Most recurring tasks will be operational, which suits the imperative paradigm, and we are required to push changes because some of those tasks also create infrastructure._
 
-Requirements for other companies may come out differently, but the process of deduction from the initial list of tasks should be the same.
-The benefit of a systematic process is that it is transparent and easily documented.
-It is also easy to know when you're requirements have changed.
-
 Let's list out the current crop of CCA-like tools, and cross off any not meeting requirements.
 Our goal (perhaps as CTO or lead) is to arrive at a rational tooling choice, which results in a low-friction DevOps environment.
 
@@ -183,7 +179,15 @@ Our goal (perhaps as CTO or lead) is to arrive at a rational tooling choice, whi
 At this point we have some remaining options to choose from, all of which meet our fictional company requirements.
 Refining the choice from here could be down to the skills available in the team or job market, tool maturity and community support.
 
-The above table of options would look a little different if we were automating infrastructure tasks.
+It is a straightforward choice to go with Ansible in this case.
+We gain tool stability and maturity, plenty of community support, and we have a ready supply of Python capable engineers.
+Ansible supports all the cloud infrastructure building we require.
+
+Requirements for other companies may come out differently, but the process of deduction from the initial list of tasks should be the same.
+The benefit of a systematic process is that it is transparent and easily documented.
+It is also easy to know when you're requirements have changed.
+
+The above table of options would look a little different if we were weighted to automating infrastructure tasks.
 We'd cross off Puppet as an option, but all others would be on the table.
 
 #### One Deductive Process, Not One Tool
