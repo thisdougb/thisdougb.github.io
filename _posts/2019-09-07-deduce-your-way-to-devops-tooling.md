@@ -45,12 +45,10 @@ We, myself included, are often guilty of wilfully neglecting the user story or c
 My artist friends closed off by removing from the set of possibilities any products that didn't meet the requirements.
 They presented me with this:
 
-```
-Sketchbooks to consider are A and B, pens are X, Y, and Z.
-The paper in sketchbook A works best with pen Y.
-The paper in sketchbook B works bext with pen X.
-Sketchbook B and pen Z is the cheapest combination.
-```
+* Sketchbooks to consider are A and B, pens are X, Y, and Z.
+* The paper in sketchbook A works best with pen Y.
+* The paper in sketchbook B works bext with pen X.
+* Sketchbook B and pen Z is the cheapest combination.
 
 Only at this point did subjectivity come into it.
 Only at this point did any of them offer which of A, B, X, Y, and Z they actually prefered.
@@ -78,7 +76,13 @@ I then tend to add in all the tasks they didn't realise they should do.
 
 | Infrastructure Tasks | Operations Tasks |
 | --- | --- |
-| Create VPC<br>Create subnet<br>Destroy RDS instance<br>Create/destroy ephemeral testing env | Manage ephemeral testing env's (query, extend)<br>Modify ECS clusters<br>Database restore testing<br>Flip database cluster nodes for patching<br>Update ECS task definitions<br>Rotate AWS IAM deployment api keys<br>Enable sales-reps to spin up demo env's |
+| Create VPC | Modify ECS clusters |
+| Create subnet | Database restore testing |
+| Destroy RDS instance| Manage ephemeral testing env's (query, extend)|
+| | Flip database cluster nodes for patching | 
+| | Update ECS task definitions |
+| | Rotate AWS IAM deployment api keys | 
+| | Enable sales-reps to spin up demo env's |
 
 The key understanding here is that infrastructure tasks suit declarative tooling (Terraform, CloudFormation, etc), and operational tasks suit imperative tooling (Puppet, Ansible, etc).
 
