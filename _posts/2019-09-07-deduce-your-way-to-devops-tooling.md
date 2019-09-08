@@ -86,7 +86,7 @@ I then tend to add in all the tasks they didn't realise they should do.
 
 The key understanding here is that infrastructure tasks suit declarative tooling (Terraform, CloudFormation, etc), and operational tasks suit imperative tooling (Puppet, Ansible, etc).
 
-> _Declarative approach_: You ask a colleague to go out and fetch your lunch, they come back with a coffee and sandwich. The coffee is lukewarm, your colleague says it started going cold because the sandwich queue was quite long.
+> _Declarative approach_: You ask a colleague to go out and fetch your lunch, they come back with a coffee and sandwich. The coffee is lukewarm, your colleague says the coffee started going cold while they were queuing for the sandwich.
 
 > _Imperative approach_: You go out for your own lunch. You buy the sandwich first and then the coffee, because you know this ensures the coffee will still be hot when you get back to your desk. You deliberately ordered the path to the end state.
 
