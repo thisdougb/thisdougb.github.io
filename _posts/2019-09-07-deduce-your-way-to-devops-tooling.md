@@ -88,7 +88,7 @@ The key understanding here is that infrastructure tasks suit declarative tooling
 
 > _Declarative approach_: You ask a colleague to go out and fetch your lunch, they come back with a coffee and sandwich. The coffee is lukewarm, your colleague says it started going cold because the sandwich queue was quite long.
 
-> _Imperative approach_: You go out for your own lunch. You buy the sandwich first and then the coffee, because you know this ensures the coffee will still be hot when you get back to your desk.
+> _Imperative approach_: You go out for your own lunch. You buy the sandwich first and then the coffee, because you know this ensures the coffee will still be hot when you get back to your desk. You deliberately ordered the path to the end state.
 
 With infrastructure tasks you don't care _how_ things are done, just that the resulting state is correct.
 If you want to destroy a test environment in AWS, you only care that no infrastructure is left standing.
