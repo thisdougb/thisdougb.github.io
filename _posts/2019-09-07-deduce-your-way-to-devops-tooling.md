@@ -63,7 +63,7 @@ Likewise, to dismiss an individual tool, be it a pen or a piece of software, on 
 When engineering in a DevOps environment, the broader _and_ deeper your toolbox, the better placed you are to pick the right tool for the job.
 So let's take this approach to automation tooling.
 
-#### List Workload Reality
+#### Workload Reality
 When I begin working with a client the first job is to figure out what they really need to achieve, their DevOps user story.
 Thinking about automation I split tasks into two categories, infrastructure tasks and operational tasks.
 Infrastructure tasks are creating and destroying things, ALBs, instances, VPCs, etc.
