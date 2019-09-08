@@ -61,7 +61,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
+  //color: $gray;
 }
 
 p {
@@ -80,6 +80,8 @@ a {
 ul, ol {
   margin: 15px 0;
   padding-left: 30px;
+  font-size: 90%;
+  font-style: italic;
 }
 
 ul {
@@ -140,6 +142,40 @@ img {
 
 .clearfix:after {
     clear: both;
+}
+
+table {
+    padding: 0;
+    font-size: 95%;
+}
+table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+    font-size: 90%;
+}
+table tr th :first-child, table tr td :first-child {
+    margin-top: 0;
+}
+table tr th :last-child, table tr td :last-child {
+    margin-bottom: 0;
 }
 
 /*********************/
@@ -257,7 +293,7 @@ nav {
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
     color: $gray;
-    font-size: 22px;
+    //font-size: 22px;
     font-style: italic;
   }
 
