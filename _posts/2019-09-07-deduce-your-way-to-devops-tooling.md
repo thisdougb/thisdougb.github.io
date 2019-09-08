@@ -200,4 +200,4 @@ I think we're just people, and people tend to be poor at rational decision makin
 We tend to go with what we know, or are biased by more recent and frequent events we're conscious of (StackOverflow search results).
 
 Using a systematic approach to tool choice should put us all in a better place.
-And if DevOps is about anything it's about reducing the manual effort at the keyboard and increasing time spent engineering simplicity.
+And if DevOps is about anything it's about reducing the manual effort at the keyboard and increasing time spent engineering for simplicity.
