@@ -42,8 +42,8 @@ My experience of technology discussions is that from the outset, you already kno
 
 Technology people often seem to start with the answer, and work backwards to justify it.
 This, I feel, is what DevOps tooling discussions are really about.
-Trying to justify our favourite tool is best in every case we come across, often simply to validate to ourselves we follow the right tribe.
-We, myself included, are often guilty of wilfully neglecting the user story currently in play.
+Advocating for our favourite tool in every case we come across, often simply to validate to ourselves we follow the right tribe.
+We, myself included, are often guilty of wilfully neglecting the user story or current context.
 
 My artist friends closed off by removing from the set of possibilities any products that didn't meet the requirements.
 They presented me with this:
@@ -54,15 +54,15 @@ The paper in sketchbook A works best with pen Y.
 The paper in sketchbook B works bext with pen X.
 Sketchbook B and pen Z is the cheapest combination.
 ```
-Only at this point did any of them offer which of A, B, X, Y, and Z they actually prefered.
 Only at this point did subjectivity come into it.
+Only at this point did any of them offer which of A, B, X, Y, and Z they actually prefered.
 Any combination in this set meets my user requirements, so I am now free to pick and reject what I like on a subjective basis.
 
 The real lesson from the art world is that tools are just tools.
 To evangelise about a pen branded X, is to miss the point completely.
 Likewise, to dismiss an individual tool, be it a pen or a piece of software, on subjective grounds is not only bad practice but also limiting your potential.
 
->**_Technology_** _("science of craft", from Greek τέχνη, techne, "art, skill, cunning of hand"; and -λογία, -logia[2]) is the collection of techniques, skills, methods, and processes used in the production of goods or services_
+>**_Technology_** _("science of craft", from Greek τέχνη, **techne**, "art, skill, cunning of hand"; and -λογία, **-logia**[2]) is the collection of techniques, skills, methods, and processes used in the production of goods or services_
 
 When engineering in a DevOps environment, the broader _and_ deeper your toolbox, the better placed you are to pick the right tool for the job.
 So let's take this approach to automation tooling.
