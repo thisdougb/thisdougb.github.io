@@ -13,50 +13,7 @@ Gone are the days when everything could be done with OS packaged Bash and Perl.
 
 Within this state of flux, what is it that makes some of us so vehemently for and against particular software tools that are seemingly disposable?
 More pressing, how can CTOs and platform leads become more effective at driving tooling choices?
-I am witnessing too many subjective Ansible v Terraform v Puppet arguments, that I am pushed to define a method to guide this decision making process.
-In this post I will describe this method using art and automation tooling.
-
-#### Life Imitates Art
-I asked some artist friends of mine to recommend a sketch pad for ink drawings.
-Immediately they fired a volley of questions at me about where, when and how I'd be sketching.
-What struck me was how familiar their line of questioning was, to software development.
-We summarised my goal in the user story:
-
->I would like to sketch the people and places I see while travelling to DevOps clients,
-as I often have short amounts of free time sitting in cafes, or train stations, etc.
-
-They then outlined the main requirements and constraints, distilling them down till everyone was in agreement:
-
-* Sketchbooks for travelling must be low-hassle and robust (hardback, no greater than A5 size).
-* Type of pen should be available to buy in most medium sized towns.
-* Type of pen ink must be fast drying.
-* Pens must not leak ink.
-* Sketchbook paper should be of sufficient weight to hold the ink.
-
-
-Quite far into the conversation I realised no-one had even mentioned a brand name.
-My experience of technology discussions is that from the outset, you already know what everyone is advocating (Terraform or Ansible, Ruby or Python, etc).
-
-Technology people often seem to start with the answer, and work backwards to justify it.
-This, I feel, is what DevOps tooling discussions are really about.
-Advocating for our favourite tool in every case we come across, often simply to validate to ourselves we follow the right tribe.
-We, myself included, are often guilty of wilfully neglecting the user story or current context.
-
-My artist friends closed off by removing from the set of possibilities any products that didn't meet the requirements.
-They presented me with this:
-
-* Sketchbooks to consider are A and B, pens are X, Y, and Z.
-* The paper in sketchbook A works best with pen Y.
-* The paper in sketchbook B works bext with pen X.
-* Sketchbook B and pen Z is the cheapest combination.
-
-Only at this point did subjectivity come into it.
-Only at this point did any of them offer which of A, B, X, Y, and Z they actually prefered.
-Any combination in this set meets my user requirements, so I am now free to pick and reject what I like on a subjective basis.
-
-The real lesson from the art world is that tools are just tools.
-To evangelise about a pen branded X, is to miss the point completely.
-Likewise, to dismiss an individual tool, be it a pen or a piece of software, on subjective grounds is not only bad practice but also limiting your potential.
+I witness too many subjective Ansible v Terraform v Puppet arguments, that I want to offer a systematic guide for decision making process.
 
 >**_Technology_** _("science of craft", from Greek τέχνη, **techne**, "art, skill, cunning of hand"; and -λογία, **-logia**[2]) is the collection of techniques, skills, methods, and processes used in the production of goods or services_
 
@@ -95,15 +52,15 @@ Great for infrastructure, but not the best for lunch orders.
 
 > _Imperative approach_: You go out for your own lunch. You buy the sandwich first and then the coffee, because you know this ensures the coffee will still be hot when you get back to your desk. You deliberately ordered the path to the end state.
 
-On the other side, operational tasks are those where you generally do care about how things are done.
+On the other hand, operational tasks are those where you generally do care about how things are done.
 Perhaps there is an operational task to test that a database backup can be restored.
 This would be done with an imperative tool, through an ordered series of state changes.
-If you imagine a 'restore testing' run-book, you have to complete each step to get to the end state.
 
 #### Deduce The Tooling Paradigm
-Tool choice should be guided by reasoning, and we take the first choice here.
-Our goal with DevOps is all about reducing friction around the tasks we do.
+Tool choice should be guided by reason, and we take the first choice here.
+Our goal with DevOps is all about reducing the degree of friction in the tasks we do.
 We can summarise the task list and give a sense of the person-hours required.
+
 The following numbers are based on a fictitious 20-dev web company, using Agile.
 
 | | Infrastructure Tasks | Operational Tasks |
@@ -197,7 +154,7 @@ We focus on process because this is where the largest gains of automation can be
 An objective method for choosing DevOps tooling is important.
 I don't believe technology people inherently make irrational choices.
 I think we're just people, and people tend to be poor at rational decision making.
-We tend to go with what we know, or are biased by more recent and frequent events we're conscious of (StackOverflow search results).
+We tend to go with what we know, or are biased by more recent and frequent events we're conscious of (eg. StackOverflow search results).
 
 Using a systematic approach to tool choice should put us all in a better place.
 And if DevOps is about anything it's about reducing the manual effort at the keyboard and increasing time spent engineering for simplicity.
