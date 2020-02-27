@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Wanted: Avant-Garde CEO"
-permalink: /devops/2020-02-27-avant-garde-ceo-role
+permalink: /startup/2020-02-27-avant-garde-ceo-role
 tags: [ceo,job,position,tech,startup]
 ---
 #### Role Description
