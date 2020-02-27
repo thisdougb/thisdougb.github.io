@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Avant-Garde CEO Role Spec
+title: Avant-Garde CEO Role
 permalink: /devops/2020-02-27-avant-garde-ceo-role
-tags: ceo,job,position
+tags: [ceo,job,position,tech,startup]
 ---
-### Avant-Garde CEO Role Spec
+### Avant-Garde CEO Role
 I had this crazy idea, to build a tech company that sustains itself.  
 This means trying to build better, rather than faster.  
 Spend more time going in the right direction.  
