@@ -41,6 +41,9 @@ Above all you will be itching to build a company offering a better work-life.
 A tech company requiring fewer hours, but on higher quality work.  
 Avant-garde, heretical, punk, choosing a radical road.
 
+<i>(Someone is trying out the role at the moment, so we're not taking applications.)</i>
+<br>
+<br>
 <br>
 Our ingredients:  
 Cafes, coffee, cakes, cycling, travel, books, daily life, responsible, sustainable, free time.  
