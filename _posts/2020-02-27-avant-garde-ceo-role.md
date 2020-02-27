@@ -12,10 +12,13 @@ Less haste, less waste.
 
 Your challenge is to build a nano company with giga reach.  
 Success will be a handful of us serving millions of users.  
-Success will also be a strong brand built organically.  
-This will require clarity of purpose and strong decision making.
+Success will also be a strong brand built organically.
 
-You will innovate to make us an effective remote-only business.  
+How will we get to where we're going?  
+Who fits in our nano company, why, and when?  
+You will develop our business strategy, but call it common sense.
+
+You will innovate to make us an effective remote-only team.  
 We must use the advantages of roaming as our super-power.  
 No foosball table, no motivational messages on the walls, no office.
 
@@ -31,15 +34,15 @@ We have developed a number of design innovations.
 Innovation requires freedom of thought and time, we want more of this.  
 You will place great value in removing the daily-grind, to give us time to ponder.
 
-You probably won’t have an MBA, but having one isn’t terminal.  
-This isn’t for suitable if Auric Goldfinger is a hero of yours.  
+This isn’t suitable if Auric Goldfinger is a hero of yours.  
 If you dream of running Shadaloo, then move right along.
 
-Above all you will be itching to do better, to create a better sort of company.  
-A company working fewer hours on higher quality tasks.
+Above all you will be itching to build a company offering a better work-life.  
+A tech company requiring fewer hours, but on higher quality work.  
+Avant-garde, heretical, punk, a radical road.
 
 Our ingredients:  
-Cafes, coffee, cakes, cycling, travel, impact, daily life, responsible, sustainable, free time.  
+Cafes, coffee, cakes, cycling, travel, books, daily life, responsible, sustainable, free time.  
 Innovation, cutting edge, anti-pattern, purpose, remote working, experiment, think more.  
 Automation, bots, machine learning, networks, scalable, high performance, testing.  
 iOS, Android, Python, Swift, Java, Node, Kafka, Redis, Containers, AWS, GCP, Ansible.
