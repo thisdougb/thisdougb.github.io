@@ -24,10 +24,10 @@ No foosball table, no motivational messages on the walls, no office.
 
 Can you help us average four hours of work per day?  
 You will figure out how to measure operational entropy, then avoid it.  
-Saying no, more often, will help us move faster on the stuff of value.
+Saying no, more often, will help us move faster on the valuable stuff.
 
 One of our few employee metrics measures how often we use our own app in daily life.  
-We are our own users, and greatest critics, always looking for gains.  
+We're making this for us, it should be our best work.  
 You will ensure we continuously consider our experience as daily users.
 
 We have developed a number of design innovations.  
@@ -39,9 +39,9 @@ If you dream of running Shadaloo, then move right along.
 
 Above all you will be itching to build a company offering a better work-life.  
 A tech company requiring fewer hours, but on higher quality work.  
-Avant-garde, heretical, punk, choosing a radical road.
+Avant-garde, heretical, punk, take us on a radical road.
 
-<i>(Someone is trying out the role at the moment, so we're not taking applications.)</i>
+<i>(Someone is trying out the role at the moment, so we're not currently taking applications.)</i>
 <br>
 <br>
 <br>
