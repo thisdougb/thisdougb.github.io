@@ -16,7 +16,7 @@ Success will also be a strong brand built organically.
 
 How will we get to where we're going?  
 Who fits in our nano company, why, and when?  
-You will develop our business strategy, but call it common sense.
+You will develop our strategy, using technology before people to achieve scale.
 
 You will innovate to make us an effective remote-only team.  
 We must use the advantages of roaming as our super-power.  
@@ -32,7 +32,7 @@ You will ensure we continuously consider our experience as daily users.
 
 We have developed a number of design innovations.  
 Innovation requires freedom of thought and time, we want more of this.  
-You will place great value in removing the daily-grind, to give us time to ponder.
+You will place great value on removing the daily-grind, to give us time to ponder.
 
 This isn’t suitable if Auric Goldfinger is a hero of yours.  
 If you dream of running Shadaloo, then move right along.
