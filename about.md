@@ -4,6 +4,22 @@ title: About
 permalink: /about/
 ---
 
+**Co-Founder** : tech startup
+
+Mobile with cloud platform, helping people in daily life.
+
+{% raw %}
+<br />
+{% endraw %}
+
+**CTO** : strategy, innovation
+
+Mostly identifying and building innovation into products.  Innovative ideas allows companies to stand out, naturally.
+
+{% raw %}
+<br />
+{% endraw %}
+
 **Engineering** : whiteboards, ideas, discussion, proof of concept, iteration
 
 The engineering function is where we forge new ideas, infrastructure design, prototypes.   As Operations becomes less manual and Architecture ceases to work well within an Agile approach, Engineering is where advances are made.   
