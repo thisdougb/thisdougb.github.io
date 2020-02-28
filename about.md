@@ -14,7 +14,7 @@ Mobile with cloud platform, helping people in daily life.
 
 **CTO** : strategy, innovation
 
-Mostly identifying and building innovation into products.  Innovative ideas allows companies to stand out, naturally.
+Mostly identifying and building innovation into products.  Innovative ideas allow companies to stand out, naturally.
 
 {% raw %}
 <br />
