@@ -4,7 +4,6 @@ title: "Upload Zwift Activities to Cycling Analytics"
 permalink: /cycling/2020-03-25-zwift-to-cycling-analytics
 tags: [cycling,zwift,indoor,javascript,analytics]
 ---
-#### Upload Zwift Activities to Cycling Analytics
 Cycling Analytics [published](https://www.cyclinganalytics.com/blog/2018/10/upload-rides-from-zwift) a method for easily uploading Zwift activities. Unfortunately Zwift has evolved, and the method no longer works.
 
 I updated the method, which is a little different but still a lot less hassle than downloading the fit files and then uploading to CA.
