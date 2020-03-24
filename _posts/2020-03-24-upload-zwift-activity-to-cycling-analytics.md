@@ -17,14 +17,25 @@ What you will need:
 * Use this [bookmarklet generator](https://bookmarklets.org/maker/)
 
 To simplify things, I created a [screen capture video](https://vimeo.com/400242509).
+
 But for the hasty, this is the gist of it:
 
-* Generate the bookmarklet with the new code
-* Go to your [Zwift feed](https://zwift.com/feed)
-* Click on the activity you want to upload
-* Click on the Setting/Detail icon (round gear to the right of the ride title)
-* Click on that bookmarklet, which should reveal 'SEND TO CA'
-* Click on the 'SEND TO CA' button
-* View your ride in Cycling Analytics
+###### Generate the bookmarklet with the new code
+![bookmarklets.org](/images/bookmarklet-maker.png)
+
+###### Add the bookmarklet to your browser toolbar (replace TOKEN!)
+![bookmarklets.org](/images/add-bookmarklet.png)
+
+###### Go to the settings of an activity you want to upload
+![bookmarklets.org](/images/zwift-activity.png)
+
+###### Click the bookmarklet you just created, to insert the CA button
+![bookmarklets.org](/images/click-bookmarklet.png)
+
+###### Click the SEND TO CA button, it ticks when done
+![bookmarklets.org](/images/click-upload.png)
+
+###### View your ride in Cycling Analytics
+![bookmarklets.org](/images/activity-uploaded.png)
 
 For any questions/suggestions I'm on Twitter [@thisdougb](https://twitter.com/thisdougb)
