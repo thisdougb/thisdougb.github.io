@@ -16,7 +16,7 @@ What you will need:
 * The [new code](https://gist.github.com/thisdougb/45221618e66300b05a0c82e875c3b264) which does the magic
 * Use this [bookmarklet generator](https://bookmarklets.org/maker/)
 
-To simplify things, I created a [screen capture video](https://vimeo.com/400242509).
+To simplify things, I created a [video](https://vimeo.com/400290190) to walk you through it.
 
 But for the hasty, this is the gist of it:
 ### Do These Two Steps Once
