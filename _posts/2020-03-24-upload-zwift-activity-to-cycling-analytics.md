@@ -12,7 +12,7 @@ I updated the method, which is a little different but still a lot less hassle th
 
 What you will need:
 * The [original method](https://www.cyclinganalytics.com/blog/2018/10/upload-rides-from-zwift), you should read this for context
-* You Cycling Analytics token (see above instructions)
+* Your Cycling Analytics token (see above instructions)
 * The [new code](https://gist.github.com/thisdougb/45221618e66300b05a0c82e875c3b264) which does the magic
 * Use this [bookmarklet generator](https://bookmarklets.org/maker/)
 
