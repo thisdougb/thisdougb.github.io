@@ -20,7 +20,7 @@ To simplify things, I created a [screen capture video](https://vimeo.com/4002425
 But for the hasty, this is the gist of it:
 
 * Generate the bookmarklet with the new code
-* Go to your Zwift feed: https://zwift.com/feed
+* Go to your [Zwift feed](https://zwift.com/feed)
 * Click on the activity you want to upload
 * Click on the Setting/Detail icon (round gear to the right of the ride title)
 * Click on that bookmarklet, which should reveal 'SEND TO CA'
