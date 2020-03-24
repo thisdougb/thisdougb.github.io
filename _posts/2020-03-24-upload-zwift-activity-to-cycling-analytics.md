@@ -19,13 +19,14 @@ What you will need:
 To simplify things, I created a [screen capture video](https://vimeo.com/400242509).
 
 But for the hasty, this is the gist of it:
-
+### Do These Two Steps Once
 ###### Generate the bookmarklet with the new code
 ![bookmarklets.org](/images/bookmarklet-maker.png)
 
 ###### Add the bookmarklet to your browser toolbar (replace TOKEN!)
 ![bookmarklets.org](/images/add-bookmarklet.png)
 
+### Do These Steps To Upload Each Activity
 ###### Go to the settings of an activity you want to upload
 ![bookmarklets.org](/images/zwift-activity.png)
 
