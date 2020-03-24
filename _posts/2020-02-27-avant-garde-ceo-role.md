@@ -40,8 +40,6 @@ If you dream of running Shadaloo, then move right along.
 Above all you will be itching to build a company offering a better work-life.  
 A tech company requiring fewer hours, but returning higher quality work.  
 Avant-garde, heretical, punk, audacious, you'll take us on a radical road.
-
-<i>(The role is filled.)</i>
 <br>
 <br>
 <br>
