@@ -1,52 +1,31 @@
 ---
 layout: post
-title: "Wanted: Avant-Garde CEO"
-permalink: /startup/2020-02-27-avant-garde-ceo-role
-tags: [ceo,job,position,tech,startup]
+title: "Upload Zwift Activities to Cycling Analytics"
+permalink: /cycling/2020-03-25-zwift-to-cycling-analytics
+tags: [cycling,zwift,indoor,javascript,analytics]
 ---
-#### Role Description
-I had this crazy idea, to build a tech company that sustains itself.  
-This means trying to build better, rather than faster.  
-Spend more time going in the right direction.  
-Less haste, less waste.
+#### Upload Zwift Activities to Cycling Analytics
+Cycling Analytics [published](https://www.cyclinganalytics.com/blog/2018/10/upload-rides-from-zwift) a method for easily uploading Zwift activities. Unfortunately Zwift has evolved, and the method no longer works.
 
-Your challenge is to build a nano company with giga reach.  
-Success will be a handful of us serving millions of users.  
-Success will also be a strong brand built organically.
+I updated the method, which is a little different but still a lot less hassle than downloading the fit files and then uploading to CA.
 
-How will we get to where we're going?  
-Who fits in our nano company, why, and when?  
-You will develop our strategy, using technology before people to achieve scale.
 
-You will innovate to make us an effective remote-only team.  
-We must use the advantages of roaming as our super-power.  
-No foosball table, no motivational messages on the walls, no office.
 
-Can you help us average four hours of work per day?  
-You will figure out how to measure operational entropy, then avoid it.  
-Saying no, more often, will help us move faster on the valuable stuff.
+What you will need:
+* The [original method](https://www.cyclinganalytics.com/blog/2018/10/upload-rides-from-zwift), you should read this for context
+* You Cycling Analytics token (see above instructions)
+* The [new code](https://gist.github.com/thisdougb/45221618e66300b05a0c82e875c3b264) which does the magic
+* Use this [bookmarklet generator](https://bookmarklets.org/maker/)
 
-One of our few employee metrics measures how often we use our own app in daily life.  
-We're making this for us, it should be our best work.  
-You will ensure we continuously consider our experience as daily users.
+To simplify things, I created a [screen capture video](https://vimeo.com/400242509).
+But for the hasty, this is the gist of it:
 
-We have developed a number of design innovations.  
-Innovation requires freedom of thought and time, we want more of this.  
-You will place great value on removing the daily-grind, to give us time to ponder.
+* Generate the bookmarklet with the new code
+* Go to your Zwift feed: https://zwift.com/feed
+* Click on the activity you want to upload
+* Click on the Setting/Detail icon (round gear to the right of the ride title)
+* Click on that bookmarklet, which should reveal 'SEND TO CA'
+* Click on the 'SEND TO CA' button
+* View your ride in Cycling Analytics
 
-This isn’t suitable if Auric Goldfinger is a hero of yours.  
-If you dream of running Shadaloo, then move right along.
-
-Above all you will be itching to build a company offering a better work-life.  
-A tech company requiring fewer hours, but returning higher quality work.  
-Avant-garde, heretical, punk, audacious, you'll take us on a radical road.
-
-<i>(The role is filled.)</i>
-<br>
-<br>
-<br>
-Our ingredients:  
-Cafes, coffee, cakes, cycling, travel, books, daily life, responsible, sustainable, free time.  
-Innovation, cutting edge, anti-pattern, purpose, remote working, experiment, think more.  
-Automation, bots, machine learning, networks, scalable, high performance, testing.  
-iOS, Android, Python, Swift, Java, Node, Kafka, Redis, Containers, AWS, GCP, Ansible.
+For any questions/suggestions I'm on Twitter [@thisdougb](https://twitter.com/thisdougb)
