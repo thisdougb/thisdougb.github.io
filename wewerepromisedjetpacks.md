@@ -76,7 +76,7 @@ Having direction is important, and waypoints to help stay on course.
 
 I don't know any project management tools that fit the bill.
 So, to move forward, I will create one.
-Without motivation my current prototype will never make it live.
+With sustained motivation my current prototype will make it to launch.
 Which makes this the most important thing right now.
 
 Without a co-founder, gumption traps are fatal.
