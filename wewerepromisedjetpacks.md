@@ -84,8 +84,6 @@ I had in mind creating a kind of Solo-Hitchikers Guide To IT Rebellion.
 Every odd-numbered chapter should probably be on motivation and gumption traps.
 This could be chapter one.
 
-After many wrong turns and cul-de-sacs, I think I am back on the path. Hopefully, along the way, I'll pick up the bootprints of others on the same journey.
-
 Bonne route, et vive le solo.
 
 
