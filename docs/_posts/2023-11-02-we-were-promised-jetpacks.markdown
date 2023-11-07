@@ -5,8 +5,6 @@ date:   2023-11-02 18:48:44 +0000
 categories: motivation
 ---
 
-## We Were Promised Jetpacks
-
 I have become increasingly disillusioned with working in the IT industry.
 Maybe in the past ten years, but overwhelmingly so in the last five.
 Too often it feels like a satirical tragicomedy.
