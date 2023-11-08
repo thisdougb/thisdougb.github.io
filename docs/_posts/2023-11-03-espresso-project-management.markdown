@@ -24,16 +24,16 @@ Prioritising feature quality over feature quantity.
 Maintaining focus on what must be done now, rather than what may come later.
 
 Finally, the framework must inherently reject entropy as an inevitability of building software.
-As engineers, this is our rebellious action.
+As engineers, this is our rebellious act.
 
 **A journey** is a simple, and ancient, mental abstraction of a large and complex project.
 Being universally understood, there is no need for additional jargon or business-speak.
 
 A journey (major piece of work) has a destination (outcome), reached via a series of waypoints (tasks).
-It is flexible, and can cope with delays, detours, and alternate destinations.
+It is flexible, can cope with delays, detours, and alternate destinations.
 Crucially, few real journeys seem to stall or be abandoned due to low motivation.
 
-When the going gets tough, walking in the mountains, I take strength from looking backwards at progress made.
+When the going gets tough, hiking in the mountains, I take strength from looking backwards at progress made.
 How we journey is inherently motivation boosting.
 
 Having completed many long distance journeys, I feel solo tech ventures fit this abstraction perfectly.
@@ -50,10 +50,10 @@ Future journeys and waypoints are left as plain text.
 Waypoints can be added to the current journey, if they are required to move us closer to journeys end.
 This can happen if there are unforeseen challenges.
 
-I try to be as ~~lazy~~ efficient as possible, so this file doubles as my company history.
+I try to be as ~~lazy~~ efficient as possible, so the journey log doubles as my company history.
 On reaching a waypoint I record a little note for posterity and add the date.
 
-Just like teams, solo's are much happier spending time productively.
+Time spent on admin is very low.
 Currently it's one espresso per waypoint reached, roughly half an hour of clock-time, to update the journey log.
 
 ### Example
@@ -97,6 +97,8 @@ Trip to see AH, J, and B. Realised the huge potential for one-trip subscription 
 
 It's really that simple.
 By avoiding the performative elements commonly used in project management frameworks, what's required _is_ simple.
+
+### Automated Booster
 
 I've saved the niftiest thing till last.
 Having a text file journey log meant I was able to automate a view of my journey as a wallpaper for my phone.

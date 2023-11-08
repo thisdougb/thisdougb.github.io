@@ -4,7 +4,12 @@ title:  "We Were Promised Jetpacks"
 date:   2023-11-02 18:48:44 +0000
 ---
 
-<img src="/assets/manhikinginmountains.png" alt="Illustration of man walking in moountains." width="100%" height="auto">
+<img src="/assets/manhikinginmountains.png" alt="Illustration of man hiking in mountains." width="100%" height="auto">
+
+A few weeks go I decided to hike along the old French/Spanish border.
+About 250 km, over a week or so.
+With a backpack, sadly not a jetpack.
+Seeking remoteness, to try to understand a general feeling of dispondency.
 
 I have become increasingly disillusioned with working in the IT industry.
 Maybe in the past ten years, but overwhelmingly so in the last five.
@@ -20,7 +25,7 @@ To reduce frustration I used to think up allegories.
 
 Sound a bit Orwellian, Kafka-esque?
 This is pretty much how the IT industry now makes software.
-From an infinite stream, we mechanically process each micro task in isolatation of the next ones.
+From an infinite stream, we mechanically process micro tasks.
 Commoditisation of software production has nullified the intellectual creativity it once had.
 Working with technology wasn't supposed to be like this.
 
@@ -39,10 +44,7 @@ Crossing Europe many times.
 Every journey has periods when things seem hopeless, but I always kept going.
 Why? What is motivating me in those tough times that I'm missing at work?
 
-I decided to walk along the old French/Spanish (Aragon) border, to think about it.
-About 250 km, over a week or so.
-
-A note I made on that trip:
+A note I made on my hike into the French Pyrenees:
 
 > Climbing a goat track up to the col. Rocky, narrow, and very steep, it clings to the mountain side. 
 Pause every five steps, for breath.
@@ -72,20 +74,20 @@ Yes! This makes sense.
 _Why_ disillusioned with IT, and _why_ failing to launch technology businesses.
 The de facto project management framework we use in IT is inherently demotivating to me.
 
-I was building prototypes but preoccupied by future tasks to turn it into a business.
+I have been building prototypes while preoccupied by future tasks to turn it into a business.
 Thinking almost exclusively about the greater distance to go.
 My motivation just drained away.
 
 What is urgently needed is a lightweight method of planning that is _inherently motivating_.
 Probably a method that is sparse for far away ideas.
-Having direction is important, and waypoints to help stay on course.
+Though direction is important, and waypoints to help stay on course.
 
 I don't know any project management tools that fit the bill.
 So, to move forward, I will create one.
 With sustained motivation my current prototype will make it to launch.
-Which makes this the most important thing right now.
+Which makes this the most important task right now.
 
-Without a co-founder, gumption traps are fatal.
+Without a co-founder, gumption traps are mostly fatal.
 I had in mind creating a kind of Solo-Hitchikers Guide To IT Rebellion.
 Every odd-numbered chapter should probably be on motivation and gumption traps.
 This could be chapter one.
