@@ -4,7 +4,7 @@ title:  "We Were Promised Jetpacks"
 date:   2023-11-02 18:48:44 +0000
 ---
 
-![Man hiking in mountains](/assets/manhikinginmountains.png)
+<img src="/assets/manhikinginmountains.png" alt="Illustration of man walking in moountains." width="100%" height="auto">
 
 I have become increasingly disillusioned with working in the IT industry.
 Maybe in the past ten years, but overwhelmingly so in the last five.
