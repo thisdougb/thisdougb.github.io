@@ -23,23 +23,29 @@ permalink: date
 title: Technology, and espresso.
   #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A journey to build a scaled web app run by one person.
-  Possible with operational efficiency, automation, and simplicity. 
+  Building a scaled web app run by one person.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://far-oeuf.com" # the base hostname & protocol for your site, e.g. http://example.com
+
 author: Doug Bridgens
-twitter_username: thisdougb
-github_username:  thisdougb
 
 environment: production
 google_analytics: G-4X23N63S2J
 
 # Build settings
-#theme: minima
-remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
+
+# https://github.com/jekyll/minima
+minima:
+  social_links:
+    - { platform: github,  user_url: "https://github.com/thisdougb" }
+    - { platform: instagram, user_url: "https://instagram.com/far_oeuf" }
+    - { platform: twitter, user_url: "https://twitter.com/thisdougb" }
+
+#theme: minima
+remote_theme: jekyll/minima
 
 # Exclude from processing.
 # The following items will not be processed, by default.
