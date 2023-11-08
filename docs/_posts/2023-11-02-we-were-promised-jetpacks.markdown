@@ -6,6 +6,11 @@ date:   2023-11-02 18:48:44 +0000
 
 <img src="/assets/manhikinginmountains.png" alt="Illustration of man walking in moountains." width="100%" height="auto">
 
+A few weeks go I decided to hike along the old French/Spanish border.
+About 250 km, over a week or so.
+With a backpack, sadly not a jetpack.
+I wanted remoteness, to try to understand my general lack of motivation.
+
 I have become increasingly disillusioned with working in the IT industry.
 Maybe in the past ten years, but overwhelmingly so in the last five.
 Too often it feels like a satirical tragicomedy.
@@ -39,10 +44,7 @@ Crossing Europe many times.
 Every journey has periods when things seem hopeless, but I always kept going.
 Why? What is motivating me in those tough times that I'm missing at work?
 
-I decided to walk along the old French/Spanish (Aragon) border, to think about it.
-About 250 km, over a week or so.
-
-A note I made on that trip:
+A note I made on my hike into the French Pyrenees:
 
 > Climbing a goat track up to the col. Rocky, narrow, and very steep, it clings to the mountain side. 
 Pause every five steps, for breath.
