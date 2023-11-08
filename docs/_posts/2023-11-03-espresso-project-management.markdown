@@ -2,9 +2,7 @@
 layout: post
 title:  "Espresso Project Management Framework"
 date:   2023-11-03 18:48:44 +0000
-categories: project management
 ---
-
 Existing project management frameworks for software projects focus on fast delivery, rather than quality delivery.
 The effect of this bias is compounded technical risk (euphimistically called technical debt), as a result of increasing entropy in the system.
 

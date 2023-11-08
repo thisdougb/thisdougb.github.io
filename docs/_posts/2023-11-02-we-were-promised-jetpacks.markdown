@@ -2,7 +2,6 @@
 layout: post
 title:  "We Were Promised Jetpacks"
 date:   2023-11-02 18:48:44 +0000
-categories: motivation
 ---
 
 I have become increasingly disillusioned with working in the IT industry.
