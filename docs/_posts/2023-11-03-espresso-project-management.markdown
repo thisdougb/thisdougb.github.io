@@ -105,7 +105,9 @@ Having a text file journey log meant I was able to automate a view of my journey
 
 Every time I glance at my phone, the current waypoint to focus on is right there.
 If I'm having a moment, then I can see solid progress is being made and take heart.
+
 It's my handheld motivation booster.
+Whenever or wherever, I can spend time and reflect on the journey so far.
 
 And by moving non-essential app icons off the home screen, I must swipe past my project in order to waste time elsewhere.
 A little nudge to spending time wisely.
