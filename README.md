@@ -4,7 +4,7 @@
 
 To test locally:
 
-``
+```
 $ cd docs
 $ JEKYLL_ENV=development bundle exec jekyll serve
 Configuration file: /Users/dougb/dev/thisdougb.github.io/docs/_config.yml
