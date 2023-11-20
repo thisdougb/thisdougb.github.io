@@ -1,122 +1,145 @@
 ---
 layout: post
-title:  "Espresso Project Management Framework"
+title:  The Espresso Framework
 date:   2023-11-03 18:48:44 +0000
 ---
 
-Existing project management frameworks for software projects focus on fast delivery, rather than quality delivery.
-The effect of this bias is compounded technical risk (euphimistically called technical debt), as a result of increasing entropy in the system.
+As a solo venture I've tried most project management tools. Agile, Trello lists, paper lists, GitHub Projects, JFDI, etc. All mis-fired for me, I was planning but not doing.
 
-A system (design, people, code, processes, etc) with growing entropy is increasingly difficult to work on.
-Productivity and motivation both dwindle, and the software becomes clunky and temperamental to use.
+I need a way to manage projects, that doesn't suck the joy out of making progress.
 
-Would you eat or work in a restaurant where the managers didn't believe in washing the dishes or clearing the tables?
+Unable to find something ready-made, I decided to create the Espresso framework. 
+Something simple, designed for solos, managed in the time it takes to drink an espresso.
 
-For a solo creator, **time and motivation** are precious ingredients.
-Without them, we falter.
-Combined, they make us unstoppable.
+### Solo Differs
 
-An effective project management framework must preserve free-time by demanding high operational efficiency.
-Therefore, automation is a required element in the design of processes and software components.
+When "team work" features are stripped out, project management is objectively very simple.
 
-Motivation is trickier, we can only create conditions for it to flourish.
-Prioritising feature quality over feature quantity.
-Maintaining focus on what must be done now, rather than what may come later.
+In a solo venture we need less objectivity, and rather more subjectivity. 
+Our own motivation and time is far more important than labels, charts, and overly-planning the future.
 
-Finally, the framework must inherently reject entropy as an inevitability of building software.
-As engineers, this is our rebellious act.
+Motivation and time are precious ingredients for a solo. 
+The way we work creates and consumes both. 
+The Espresso framework inherently boosts motivation and protects time. 
+Without them we falter. Combined, they make us unstoppable.
 
-**A journey** is a simple, and ancient, mental abstraction of a large and complex project.
-Being universally understood, there is no need for additional jargon or business-speak.
+Because Espresso values motivation and time, it increases our chance of success. 
+However individual success is defined, as a solo it must incorporate daily self-determination. 
+Such as the freedom to go for a coffee, or taking some time to recharge.
 
-A journey (major piece of work) has a destination (outcome), reached via a series of waypoints (tasks).
-It is flexible, can cope with delays, detours, and alternate destinations.
-Crucially, few real journeys seem to stall or be abandoned due to low motivation.
+Solos must continually find the energy to endure, as well as everything else.
 
-When the going gets tough, hiking in the mountains, I take strength from looking backwards at progress made.
-How we journey is inherently motivation boosting.
+### How It Works
 
-Having completed many long distance journeys, I feel solo tech ventures fit this abstraction perfectly.
-So let's define a barely-there **espresso project mangagement framework**.
-
-### Getting things done
-
-My project management tool is a simple text file (in markdown format) as a journey log.
-It started out in a bullet journal, to prevent over complication.
-
-The active journey ``###`` and waypoints ``####`` are defined as headings.
-Future journeys and waypoints are left as plain text.
-
-Waypoints can be added to the current journey, if they are required to move us closer to journeys end.
-This can happen if there are unforeseen challenges.
-
-I try to be as ~~lazy~~ efficient as possible, so the journey log doubles as my company history.
-On reaching a waypoint I record a little note for posterity and add the date.
-
-Time spent on admin is very low.
-Currently it's one espresso per waypoint reached, roughly half an hour of clock-time, to update the journey log.
-
-### Example
-
-This sample is taken from my current journey log.
+I chose to use <a href="https://far-oeuf.com/2023/11/02/we-were-promised-jetpacks.html" target="_blank"> the abstract idea of a journey</a> to model my lists and tasks.
+A destination represents a significant chunk of work, and waypoints are tasks that to get me there.
 
 ```
-## Journeys
-
-Journey: Build community
-Journey: Open app to paying subscribers
-Journey: Add payment functionality
-
-### Journey: App components refactored for stability
-
-Time to make the code stable, as I move towards launch.
-
-Waypoint: complete webui refactor
-Waypoint: complete mapboxint refactor
-
-#### Waypoint: Complete stravaint refactor
-
-Refactor the cleanest component first, to focus on effective CSP implementation.
-
-#### Waypoint [Oct 23]: GR367 hike, 260 km, 9000 m ascent, 10 days
-
-Fantastic walk in the Pyrenees, met some good people. Feel motivated and ready to continue.
-
-#### Waypoint [Oct 23]: Figured out motivation, wrote about it
-
-Used GR367 hike to figure this out, wrote We Were Promised Jetpacks. Relief.
-
-#### Waypoint [Oct 23]: Decided on CSP concurrent design pattern
-
-Go's natural pattern for concurrency, brings easier testing and real-time processing.
-
-#### Waypoint [Sep 23]: Affric hike, 190 km, found subscribers on GGW
-
-Trip to see AH, J, and B. Realised the huge potential for one-trip subscription on trophy hikes.
+journeys:
+  - destination: significant chunk of work
+    waypoints:
+      - name: a task that gets me closer
+        done: MMYY (on completion)
+        component: name of component (optional)
+        note: | (optional)
+          brief descriptive text why this task is necessary
+      - name: another task that gets me closer
+        note: | (optional)
+          brief descriptive text why this task is necessary
 ```
 
-It's really that simple.
-By avoiding the performative elements commonly used in project management frameworks, what's required _is_ simple.
+I choose to store this in YAML format (<a href="https://far-oeuf.com/assets/example_journey.yml" target="_blank">fuller example</a>), because it lets me automate some things later on.
+Other formats would work too.
 
-### Automated Booster
+The usual 'team' accoutrements (Due Date, Owner, Meetings, etc) are not required.
+Keep it simple, save effort.
 
-I've saved the niftiest thing till last.
-Having a text file journey log meant I was able to automate a view of my journey as a wallpaper for my phone.
+Maintaining this data file is the only admin required.
+I tend to do this on the iPhone over an espresso in a cafe.
+Updating the _done_ element of the current waypoint automatically rolls the next one into view.
 
-Every time I glance at my phone, the current waypoint to focus on is right there.
-If I'm having a moment, then I can see solid progress is being made and take heart.
+#### Focus
 
-It's my handheld motivation booster.
-Whenever or wherever, I can spend time and reflect on the journey so far.
+Focus is required to get things done well.
 
-And by moving non-essential app icons off the home screen, I must swipe past my project in order to waste time elsewhere.
-A little nudge to spending time wisely.
+The path to a destination is rarely linear.
+Therefore waypoints can have a _component_ element, calling out detours.
+
+Thus tasks from many sources can be funnelled into a single list of waypoints.
+Solo projects have many elements, but only one do-er.
+One list at a time, with one task at a time.
+
+The daily visible face of the Espresso framework is its focus view.
+And, because it's automated, it comes for free whenever I update the YAML data file.
+
+Focus view shows the destination, current waypoint, and a little look back at progress made.
+A motivation boosting nudge, instead of facing large ToDo lists every day.
+
+<img src="/assets/espressoshellmessage.png" alt="Screenshot espresso framework focused tasks on linux shell login" width="100%" height="auto">
+
+#### Language Matters
+
+It took me a while to realise that objective language is demotivating.
+In a team environment objectivity means clear communication, so the cost is worth it.
+
+But we don't talk to each other objectively, I hope.
+I use language that motivates, that speaks to my strengths.
+
+I rewrote this task:
+
+```
+Store API data on filesystem
+```
+
+to:
+
+```
+Simplest way to store Strava data on filesystem
+```
+
+As an engineer I am nudged by the challenge of finding the simplest way to do something.
+Simple is always better than complicated.
+
+Other examples of motivation nudging language:
+
+```
+Decide...
+Learn...
+Figure out...
+```
+
+All of these challenge me to overcome, rather than simply do.
+It's a small thing, but it seems to matter.
+
+#### Automated Boosting
+
+In a solo venture, something is unfinished if it costs time to manage.
+We are fortunate that there are so many ways to automate in computing.
+The simplest works best.
+
+Each time I update the project data file, automation ripples out the change to my work environment.
+
+When I log into my computers they automatically display the latest focus view (above).
+It's another nudge to keep me right, keep me moving forward.
+
+I’ve saved the niftiest thing till last.
+I was able to automate the focus view as a wallpaper for my phone.
+
+Every time I glance at my phone, the waypoint to focus on is right there.
+If I’m having a moment, then I can see solid progress is being made and take heart. 
+It’s my handheld motivation booster.
+
+And by moving non-essential app icons off the home screen, I must swipe past my project in order to waste time. 
+Another little nudge to spend effort wisely. 
 I really wish I thought of this years ago.
 
-<img src="/assets/iphonewithespresso.png" alt="Screenshots of iphone with espresso framework wallpaper" width="100%" height="auto">
+All this happens while I enjoy my espresso.
+
+<img src="/assets/iphonewithespresso.jpg" alt="Screenshots of iphone with espresso framework wallpaper" width="100%" height="auto">
 
 ---
 
 -- started in various cafes in Orléans, France  
 -- continued on the 11:00 train from London to Edinburgh  
--- continued in Detour cafe, Edinburgh
+-- continued in Detour cafe, Edinburgh  
+-- refactored in Detour cafe, Edinburgh
