@@ -1,0 +1,76 @@
+journeys:
+  
+  # this is a future journey to add a feature
+  # hardly any detail, more of a placeholder
+  - destination: Be able to take subscriber payments
+    waypoints:
+      - name: Work with beta testers
+      - name: Implement payment service
+      - name: Decide on a payment gateway
+      - name: Investigate legal and terms
+
+  # this is the current journey, because it has no 'done' key
+  - destination: app refactored with CSP
+    purpose: | 
+      This is the time to make the code stable. 
+      Refactor without adding new features. 
+      CSP gives real-time event processing, and removes polling routines.
+
+    waypoints:
+      # some future waypoints as placeholders
+      - name: Complete webui refactor
+      - name: Complete mapboxint refactor
+
+      - name: Complete stravaint refactor
+        note: |
+          Refactor the cleanest component first, to focus on CSP implementation.
+
+        # a waypoint that contains waypoints is like a detour to do tasks on a component
+        waypoints:
+          - name: Simplify rate-limiting implementation
+            component: stravaint
+            note: |
+              Remove rate-limiting dependency on Redis reads/writes.
+
+          # this waypoint is the current one, because it has no 'done' key and
+          # is the furthest from the journey destination. waypoints are in 
+          # reverse order.
+          - name: Simplest way to store Strava data on filesystem
+            component: stravaint
+            note: |
+              Store activity summary and streams on filesystem.
+              Makes troubleshooting simpler.
+
+          - name: Defined CSP style guide
+            done: Oct 23
+            component: stravaint
+            note: |
+              Define pattern for objects to be passed as messages.
+
+      - name: GR367 hiked, 260 km, 9000 m ascent, 10 days
+        done: Oct 23
+        note: |
+          A hike to think about motivation, and getting this thing launched.
+
+      - name: Figured out motivation, wrote about it
+        done: Oct 23
+        note: |
+          On the GR367 hike, figured this out and wrote about it (We Were Promised Jetpacks).
+          Feels good to understand the problem, with a way forward
+
+      - name: Decided on CSP concurrent design pattern
+        done: Sep 23
+        note: |
+          Decided to follow Go's natural CSP pattern for concurrency.
+          More robust, event driven, and easier to test.
+          Gets rid of awful polling routines.
+
+      - name: Affric hiked, 190 km, found subscribers on GGW
+        done: Aug 23
+        note: |
+          Trip to see AH, J, and B.
+          Realised on the GGW the huge potential for walkers to be subscribers.
+
+
+
+
