@@ -108,7 +108,7 @@ Learn...
 Figure out...
 ```
 
-All of these challenge me to overcome, rather than simply do.
+All of these challenge me to overcome, rather than merely do work.
 It's a small thing, but it seems to matter.
 
 #### Automated Boosting
