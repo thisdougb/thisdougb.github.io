@@ -15,7 +15,7 @@ Something simple, designed for solos, managed in the time it takes to drink an e
 
 When "team work" features are stripped out, project management is objectively very simple.
 
-In a solo venture we need less objectivity, and rather more subjectivity. 
+But in a solo venture we need less objectivity, and rather more subjectivity. 
 Our own motivation and time is far more important than labels, charts, and overly-planning the future.
 
 Motivation and time are precious ingredients for a solo. 
@@ -66,10 +66,10 @@ The path to a destination is rarely linear.
 Therefore waypoints can have a _component_ element, calling out detours.
 
 Thus tasks from many sources can be funnelled into a single list of waypoints.
-Solo projects have many elements, but only one do-er.
+Solo projects have many elements, but only one pair of hands.
 One list at a time, with one task at a time.
 
-The daily visible face of the Espresso framework is its focus view.
+The daily face of the Espresso framework is its focus view.
 And, because it's automated, it comes for free whenever I update the YAML data file.
 
 Focus view shows the destination, current waypoint, and a little look back at progress made.
@@ -79,10 +79,10 @@ A motivation boosting nudge, instead of facing large ToDo lists every day.
 
 #### Language Matters
 
-It took me a while to realise that objective language is demotivating.
-In a team environment objectivity means clear communication, so the cost is worth it.
+It took me a while to realise that objective language can be demotivating.
+In a team environment objectivity leads to clearer communication, so the cost is worth it.
 
-But we don't talk to each other objectively, I hope.
+But we don't talk to ourselves objectively, I hope.
 I use language that motivates, that speaks to my strengths.
 
 I rewrote this task:
@@ -117,7 +117,7 @@ In a solo venture, something is unfinished if it costs time to manage.
 We are fortunate that there are so many ways to automate in computing.
 The simplest works best.
 
-Each time I update the project data file, automation ripples out the change to my work environment.
+Each time I update the project data file, automation ripples the change out to my work environment.
 
 When I log into my computers they automatically display the latest focus view (above).
 It's another nudge to keep me right, keep me moving forward.
