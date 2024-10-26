@@ -18,7 +18,7 @@ Because of the way Terraform works (code -> state -> real life), an unexpected e
 
 A collegue asked me why a Terraform-managed AWS Aurora cluster failed to destroy, giving a confusing error.
 The instances are destroyed, but when it comes to the cluster Terraform can't do it and stops.
-I tested creating a destroying a cluster myself and got the same error:
+I tested creating and destroying a cluster myself and got the same error:
 
 ```
 aws_rds_cluster_instance.cluster_instances[0]: Still destroying... [id=aurora-cluster-demo-0, 9m40s elapsed]
