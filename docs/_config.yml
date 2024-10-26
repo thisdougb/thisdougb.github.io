@@ -20,10 +20,10 @@
 #
 permalink: date
 
-title: Technology, with espresso.
+title: Technology, in between espressos.
   #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Doug Bridgens | 30 years building software | Sharing tips on building an automated tech company.
+  Doug Bridgens | 30 years building software | Now building a mostly-automated tech company.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://far-oeuf.com" # the base hostname & protocol for your site, e.g. http://example.com
 

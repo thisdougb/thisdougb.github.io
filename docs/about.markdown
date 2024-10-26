@@ -9,7 +9,7 @@ My goal is a profitable tech business where I am free to spend time travelling a
 So I have begun a journey to build a super-efficient web business, with only one employee.
 The rebellious nature of _one employee_ is motivating.
 
-The app will help people create stories of their travels.
+The app I'm developing will help people collect stories of their travels.
 
 I have particular expertise is in scaling teams, processes and software.
 Increasing productivity through automation and operational efficiency.
