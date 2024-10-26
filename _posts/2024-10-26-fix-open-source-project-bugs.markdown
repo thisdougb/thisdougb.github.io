@@ -55,7 +55,7 @@ Once more change and your pragmatic perspective brings a rational appraisal of t
 Finally, hopefully, a fix is created and merged.
 They are cheering in the streets, your name is whispered in awe in forums at the far reaches of the Internet.
 
-OK, maybe not that last part. But now you're part of the magical tech-industry phenomenon that is the _open source_.
+OK, maybe not that last part. But now you're part of the magical tech-industry phenomenon that is _open source_.
 Your team mates will look at you in a new light.
 Your boss will know you are the one who gets things done, a good bet for more interesting project work.
 
