@@ -4,8 +4,6 @@ title:  "Fix Open Source Project Bugs"
 date:   2024-10-26 11:48:44 +0000
 ---
 
-# Fix Open Source Project Bugs
-
 Over a series of posts, I want to share the process of fixing bugs in open source infrastructure tools.
 This post is the introduction to the topic.
 
