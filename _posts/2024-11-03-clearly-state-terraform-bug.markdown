@@ -58,21 +58,19 @@ aws_rds_cluster.default: Destroying... [id=aurora-cluster-demo]
 
 #### Bug title
 
-I often decide on this last, because only after really thinking about the problem can I summarise in a few words.
+I often decide on this last, because only after really thinking about the problem can I summarise in a few words:
 
-> RDS Aurora cluster fails to destroy because `final_snapshot_identifier` value is required
+_RDS Aurora cluster fails to destroy because `final_snapshot_identifier` value is required_
 
 ### Are you unique?
 
 Now we have classified our problem, it’s time to find out if a bug has already been raised. Because we have our own clear statement, we can objectively compare to any existing/past issues we find. 
 
-I found this issue (Dec 2017) https://github.com/hashicorp/terraform-provider-aws/issues/2588 , which had a useful snippet in the comments:
+I found these issues, inter-linked:
 
->For me, I was able to add `skip_final_snapshot`, re-apply, and then I was able to destroy without issues. The issue is indeed the state is holding the default value of false, because there was not one specified.
-
-I also found this https://github.com/hashicorp/terraform/issues/15530
-
-And this https://github.com/hashicorp/terraform-provider-aws/issues/92
+- [2588](https://github.com/hashicorp/terraform-provider-aws/issues/2588) issue from Dec 2017.
+- [15530](https://github.com/hashicorp/terraform/issues/15530)
+- [92](https://github.com/hashicorp/terraform-provider-aws/issues/92)
 
 From reading through the issues, it seems that this is a long-standing problem affecting quite a few people. There are workarounds (editing statefile, manual deletions, etc), but I don’t see any proposed fix. Over eleven years, no-one has submitted a PR as far as I can see. Only the first issue remains open, the others have been closed due to inactivity.
 
