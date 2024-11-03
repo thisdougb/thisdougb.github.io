@@ -68,9 +68,9 @@ Now we have classified our problem, it’s time to find out if a bug has already
 
 I found these issues, inter-linked:
 
-- [2588](https://github.com/hashicorp/terraform-provider-aws/issues/2588) issue from Dec 2017.
-- [15530](https://github.com/hashicorp/terraform/issues/15530)
-- [92](https://github.com/hashicorp/terraform-provider-aws/issues/92)
+- [2588](https://github.com/hashicorp/terraform-provider-aws/issues/2588) Terraform seems to ignore `skip_final_snapshot` for rds cluster (Dec 2017!)
+- [15530](https://github.com/hashicorp/terraform/issues/15530) Encryption - RDS Cluster FinalSnapshotIdentifier is required when a final snapshot
+- [92](https://github.com/hashicorp/terraform-provider-aws/issues/92) Terraform ignores `skip_final_snapshot` so it's impossible to delete rds db instance
 
 From reading through the issues, it seems that this is a long-standing problem affecting quite a few people. There are workarounds (editing statefile, manual deletions, etc), but I don’t see any proposed fix. Over eleven years, no-one has submitted a PR as far as I can see. Only the first issue remains open, the others have been closed due to inactivity.
 
