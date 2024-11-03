@@ -6,8 +6,6 @@ date:   2024-11-03 11:48:44 +0000
 
 The first part of this series is [here]({% post_url 2024-10-26-fix-open-source-project-bugs %})
 
-## As a user: Clearly state the problem
-
 In the plainest terms state what you are trying to do, what was expected, and what actually happened.
 
 This is a bit like a pitch, not just for the problem but also your pitch showing your due diligence and clear communication skills.
