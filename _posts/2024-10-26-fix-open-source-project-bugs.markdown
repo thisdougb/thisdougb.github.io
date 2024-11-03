@@ -134,7 +134,7 @@ The clarity and quality of the merge request (fix) is key here, make it easy for
 
 I'll post links to the stages here, as I do them.
 
-- [As a user, clearly state the problem]({% post_url 2024-11-03-clearly-state-terraform-bug.markdown %})
+- [As a user, clearly state the problem]({% post_url _post/2024-11-03-clearly-state-terraform-bug.markdown %})
 
 ---
 
