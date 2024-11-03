@@ -4,7 +4,7 @@ title:  "Clearly State Terraform AWS Provider Bug"
 date:   2024-11-03 11:48:44 +0000
 ---
 
-The first part of this series is [here](2024-10-26-fix-open-source-project-bugs.markdown)
+The first part of this series is [here]({% post_url 2024-10-26-fix-open-source-project-bugs.markdown %})
 
 ## As a user: Clearly state the problem
 
